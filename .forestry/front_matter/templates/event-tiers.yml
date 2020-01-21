@@ -44,4 +44,5 @@ fields:
   default: event_tiers
 pages:
 - _event-tiers/most-honorable-attendee.md
+- _event-tiers/mr-fancy-pants.md
 - _event-tiers/very-distinguished-guest.md
