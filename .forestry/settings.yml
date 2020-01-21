@@ -20,12 +20,12 @@ sections:
   templates:
   - product
 - type: directory
-  path: _eventtiers
+  path: _event-tiers
   label: Event Tiers
   create: all
   match: "*"
   templates:
-  - event_tiers
+  - event-tiers
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

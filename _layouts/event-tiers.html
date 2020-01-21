@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+{% include head.html %}
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+<div class="container">
+  {% include nav.html %}
+
+<h1 class="title is-1">{{ page.title }}</h1>
+$ {{ page.price }}
+<p>{{ page.description }}</p>
+
+<button class="snipcart-add-item button is-black"
+  data-item-id="{{ page.title | slugify }}"
+  data-item-price="{{ page.price }}"
+  data-item-url="{{ page.url }}"
+  data-item-description="{{ page.description }}"
+  data-item-image="{{ page.featured_image}}"
+  data-item-name="{{ page.title }}">
+  Add to cart
+</button>
+
+<!-- https://gist.github.com/opattison/6191106 -->
+<section class="photos">
+  {% for image in page.images %} <!-- Loop through the photos from YAML frontmatter -->
+  <figure>
+    <img src="{{ page.images[forloop.index0] }}" >
+  </figure>
+  {% endfor %}
+</section>
+
+</div><!-- /container -->
+
+{% include scripts.html %}
+
+</body>
+
+</html>

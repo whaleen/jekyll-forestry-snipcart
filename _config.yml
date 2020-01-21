@@ -15,7 +15,7 @@ collections:
     permalink: "/products/:path/"
   event-tiers:
     output: true
-    permalink: "/eventtiers/:path/"
+    permalink: "/event-tiers/:path/"
 
 
 # Exclude from processing.
