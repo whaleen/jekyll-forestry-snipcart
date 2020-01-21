@@ -27,3 +27,10 @@ sections:
 Note above that templates calls for 'products'. This needs to be created and will reside in /.forestry/front_matter/templates/products.yml
 
 I suggest you build this frontmatter template using the forestry gui.
+
+
+You will need to create a new layout for the collection and provide this as a hidden field with the default value using it's name. 
+
+In this case:
+
+/_layouts/products.html
