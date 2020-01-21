@@ -30,3 +30,5 @@ fields:
   type: image_gallery
   config: {}
   label: Images
+pages:
+- _products/nice-horse.md
