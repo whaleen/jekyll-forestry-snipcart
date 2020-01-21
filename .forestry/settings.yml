@@ -10,6 +10,8 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
+  templates:
+  - product
 - type: directory
   path: _products
   label: Products
