@@ -4,16 +4,18 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<meta name="description" content="">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="icon.png">
+<!-- <link rel="manifest" href="site.webmanifest"> -->
+<!-- <link rel="apple-touch-icon" href="icon.png"> -->
 <!-- Place favicon.ico in the root directory -->
 
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/main.css">
+
+<!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<!-- SnipCart -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
 <meta name="theme-color" content="#fafafa">
 
@@ -29,7 +31,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        JEKYLL-FORESTRY-SNIPCART
       </a>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -75,8 +77,8 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
+            <a class="button is-primary snipcart-checkout">
+              <strong>Cart</strong>
             </a>
             <a class="button is-light">
               Log in
@@ -111,12 +113,24 @@
 
 </div>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
+<!-- jQuery required by snipcart-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- snipcart -->
+<!-- snipcart public test API  -->
+<div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
 </body>
 
 </html>

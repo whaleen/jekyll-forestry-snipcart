@@ -4,16 +4,18 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<meta name="description" content="">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="icon.png">
+<!-- <link rel="manifest" href="site.webmanifest"> -->
+<!-- <link rel="apple-touch-icon" href="icon.png"> -->
 <!-- Place favicon.ico in the root directory -->
 
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/main.css">
+
+<!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<!-- SnipCart -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
 <meta name="theme-color" content="#fafafa">
 
@@ -29,7 +31,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        JEKYLL-FORESTRY-SNIPCART
       </a>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -75,8 +77,8 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
+            <a class="button is-primary snipcart-checkout">
+              <strong>Cart</strong>
             </a>
             <a class="button is-light">
               Log in
@@ -89,47 +91,46 @@
 
 
   <div class="columns">
-  <div class="column">
-    First column
-  </div>
-  <div class="column">
-    Second column
-  </div>
-  <div class="column">
-    Third column
-  </div>
-  <div class="column">
-    Fourth column
-  </div>
-</div>
+  
+    <div class="column box">
+      <h1><a class="title is-1 black" href="/products/fashion-sense/">Fashion Sense</a></h1>
+      She gazed into my soul; her eyes of liquid amber scrutinizing things inside of which I could only dream of seeing in myself. She was a mystery. A dangerously beautiful mystery, and I was ensnared in the trap which she'd set.
 
-<ul>
+The moon poured down on us, showering us with beams of light. They caught in her hair, these moonbeams, making each dark curl seem as though it was alight with passion. Her skin was illuminated by the stars; she looked deathly pale, like her heart would stop any moment, but I knew the truth. That it was beating away inside her, like a constant drum. Longingly, I devoured her face with my eyes, wishing with all my being that I could reach out and brush my hand against her perfectly shaped cheekbones, or under the feathers of her thick, dark lashes. But I refrained from doing so, and continued to succumb to the endless torture of watching her without being able to touch. She was like a china ornament, and it seemed that even the gentlest caress would break her delicate form. Her breath toppled out of her soft lips like a ball of tumble weed softly blowing through the sky. She was a fallen angel; a princess of darkness; a twilight queen. She was a mystery. A dangerously beautiful mystery. And I was in love with her. <br><strong>$ 1172 -</strong> <img src="/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg">
+    </div>
   
-    <li>
-      <a href="/products/fashion-sense/">Fashion Sense</a>
-      - 
-    </li>
+    <div class="column box">
+      <h1><a class="title is-1 black" href="/products/nice-horse/">Nice Horse</a></h1>
+      She is my pride and joy. With soft eyes that you could stare into forever, falling, but at the same time so still, they reflected promise. A heart made of love, slender profile, and a gorgeous chestnut coat, Juliette was always there for me in the darkest days, when it felt like my life was a hurricane in an endless sea. I will never forget the days I spent with her, cantering in a field full of daisies, under a clear blue sky. <br><strong>$ 2500 -</strong> <img src="/uploads/white-horse-standing-on-green-grass-field-850424.jpg">
+    </div>
   
-    <li>
-      <a href="/products/nice-horse/">Nice Horse</a>
-      - 
-    </li>
+    <div class="column box">
+      <h1><a class="title is-1 black" href="/products/swimming-lessons/">Swimming Lessons</a></h1>
+      I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer. <br><strong>$ 450 -</strong> <img src="/uploads/underwater-photography-of-woman-2404365.jpg">
+    </div>
   
-    <li>
-      <a href="/products/swimming-lessons/">Swimming Lessons</a>
-      - 
-    </li>
-  
-</ul>
+</div>
 
 </div>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
+<!-- jQuery required by snipcart-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- snipcart -->
+<!-- snipcart public test API  -->
+<div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
 </body>
 
 </html>

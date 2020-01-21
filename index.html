@@ -1,30 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
 
 <div class="columns">
-  <div class="column">
-    First column
-  </div>
-  <div class="column">
-    Second column
-  </div>
-  <div class="column">
-    Third column
-  </div>
-  <div class="column">
-    Fourth column
-  </div>
-</div>
-
-<ul>
   {% for product in site.products %}
-    <li>
-      <a href="{{ product.url }}">{{ product.title }}</a>
-      - {{ product.headline }}
-    </li>
+    <div class="column box">
+      <h1><a class="title is-1 black" href="{{ product.url }}">{{ product.title }}</a></h1>
+      {{ product.description }} <br><strong>$ {{ product.price }} -</strong> <img src="{{ product.featured_image }}">
+    </div>
   {% endfor %}
-</ul>
+</div>
