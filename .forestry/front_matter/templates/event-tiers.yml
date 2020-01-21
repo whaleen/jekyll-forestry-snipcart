@@ -42,3 +42,5 @@ fields:
   label: Layout
   hidden: true
   default: event_tiers
+pages:
+- _event-tiers/very-distinguished-guest.md
