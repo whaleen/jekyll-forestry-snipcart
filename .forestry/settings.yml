@@ -20,7 +20,7 @@ sections:
   templates:
   - product
 - type: directory
-  path: _event_tiers
+  path: _eventtiers
   label: Event Tiers
   create: all
   match: "*"
