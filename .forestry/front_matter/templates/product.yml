@@ -34,7 +34,7 @@ fields:
   type: text
   config:
     required: false
-  hidden: true
+  hidden: false
   label: Layout
   default: product
 pages:
