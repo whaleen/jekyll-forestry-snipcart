@@ -1,18 +1,21 @@
-title: Your awesome title
-email: your-email@example.com
+title: jekyll-forestry-snipcart
+email: jvaage@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+# See /forestry/settings.yml
+# Collections defined here and used by Jekyll, are defined as sections in settings.yml.
+# Also, note the .forestry/front_matter/templates which correspond to any collection/section you use.
 
 collections:
   products:
     output: true
     permalink: "/products/:path/"
+  event-tiers:
+    output: true
+    permalink: "/event-tiers/:path/"
 
 
 # Exclude from processing.
