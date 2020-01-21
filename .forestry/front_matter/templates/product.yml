@@ -31,5 +31,6 @@ fields:
   config: {}
   label: Images
 pages:
+- _products/fashion-sense.md
 - _products/nice-horse.md
 - _products/swimming-lessons.md
