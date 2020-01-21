@@ -10,5 +10,6 @@ images:
 - "/uploads/photo-of-woman-wearing-black-leather-jacket-3062627.jpg"
 - "/uploads/photo-of-woman-holding-her-hair-3062601.jpg"
 layout: product
+featured_image: "/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg"
 
 ---
