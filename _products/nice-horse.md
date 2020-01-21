@@ -11,5 +11,6 @@ images:
 - "/uploads/white-horse-standing-on-green-grass-field-850424.jpg"
 - "/uploads/photo-of-brown-and-white-foal-lying-on-grass-field-2364620.jpg"
 - "/uploads/photo-of-a-group-of-horses-2123766.jpg"
+layout: product
 
 ---
