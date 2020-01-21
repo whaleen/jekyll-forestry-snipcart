@@ -1,4 +1,44 @@
 ---
 label: Event Tiers
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: featured_image
+  type: file
+  config:
+    maxSize: 250
+  label: Featured Image
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+- name: price
+  type: number
+  label: Price
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: event_tiers
