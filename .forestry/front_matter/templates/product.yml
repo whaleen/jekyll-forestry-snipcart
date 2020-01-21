@@ -26,6 +26,11 @@ fields:
     min: 
     max: 
     step: 
+- name: featured_image
+  type: file
+  config:
+    maxSize: 250
+  label: Featured Image
 - name: images
   type: image_gallery
   config: {}
