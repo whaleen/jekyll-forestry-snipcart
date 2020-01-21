@@ -30,6 +30,13 @@ fields:
   type: image_gallery
   config: {}
   label: Images
+- name: layout
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: Layout
+  default: product
 pages:
 - _products/fashion-sense.md
 - _products/nice-horse.md
