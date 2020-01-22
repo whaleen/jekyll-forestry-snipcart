@@ -1,9 +1,64 @@
 ---
 layout: default
 ---
+test
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child">
+          <p class="title">Oh Hello</p>
+          <p class="subtitle">{{ site.description }}</p>
+<img src="{{site.url}}/img/vendors.png">
+          <div>            <a class="button snipcart-checkout">
+                        <strong><ion-icon name="logo-github"></ion-icon>
+ GitHub</strong>
+                      </a>
+
+</div>
+
+        </article>
+        <article class="tile is-child">
+          <p class="title">Tiles &amp; Whatnot</p>
+          <p class="subtitle">Bottom tile</p>
+          <p>dsfjshdlkjfhalskdjfhlkajsdhf hjklsdlkh gkhjsg ksdjhfg skjhdfg skjhdfg ksjf gksjdg fkjs dfghk sjdhfg  hsdjgf kajhgf kasjdhfg askjhdfg akjhsdgf kajshdgf akjshdfg kjhasfgka sjdhgfk ahjsdg fkj  aksjd flaksdfhlaks djfh kjhlkjh lkjad kasdl kjhasdl kjas lk has lkj akd h wlioufh qliugh lwiurgh aiuhgla eiurbv laieurv ,kunrl viualkjvanleiurnliauenv laeurh lauehr ;iouher;giou ehslriug helsirug sl;ieunb ;seoun lwieuh jhg fuywge fkuygw vkhse vkuybwekuvyb skeurbvy ksehjbrvkusybek ruvybks eurbkv uyb</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          {% for product in site.products limit: 1 %}
+          <p class="title">{{ product.title }} - ${{ product.price }}</p>
+          <p class="subtitle">{{ product.description | truncatewords:35 }}</p>
+          <figure class="image">
+            <img src="{{ product.featured_image }}">
+          </figure>
+          {% endfor %}
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child">
+        <div class="content">
+<!--  -->
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <div class="content">
+        <p class="title">Tall tile</p>
+        <p class="subtitle">With even more content</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
 
 <div class="columns">
-  {% for product in site.products %}
+  {% for product in site.products limit: 1 %}
     <div class="column box">
       <h1><a class="title is-1 black" href="{{ product.url }}">{{ product.title }}</a></h1>
       {{ product.description }} <br><strong>$ {{ product.price }} -</strong> <img src="{{ product.featured_image }}">

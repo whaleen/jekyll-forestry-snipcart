@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<div class="columns">
+  {% for event in site.event-tiers %}
+    <div class="column box">
+      <h1><a class="title is-1 black" href="{{ event.url }}">{{ event.title }}</a></h1>
+      {{ event.description }} <br><strong>$ {{ event.price }} -</strong> <img src="{{ event.featured_image }}">
+    </div>
+  {% endfor %}
+</div>

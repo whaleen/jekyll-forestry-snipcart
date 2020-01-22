@@ -29,8 +29,15 @@ Note above that templates calls for 'products'. This needs to be created and wil
 I suggest you build this frontmatter template using the forestry gui.
 
 
-You will need to create a new layout for the collection and provide this as a hidden field with the default value using it's name. 
+You will need to create a new layout for the collection and provide this as a hidden field with the default value using it's name.
 
 In this case:
 
 /_layouts/products.html
+
+
+placeholder images:
+https://www.pexels.com/search/exhibition/
+
+placeholder copy:
+https://www.descriptionari.com/quotes/the-girl-with-no-name/?h=fashion

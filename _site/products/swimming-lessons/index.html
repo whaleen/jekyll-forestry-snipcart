@@ -14,6 +14,8 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<link rel="stylesheet" href="http://localhost:4000/css/bulma-helpers.min.css">
+
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
@@ -25,7 +27,7 @@
 
   <!-- Add your site or application content here -->
 <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar has-padding-25" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
         JEKYLL-FORESTRY-SNIPCART
@@ -40,12 +42,12 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
-          Home
+        <a class="navbar-item" href="/products.html">
+          Products
         </a>
 
-        <a class="navbar-item">
-          Documentation
+        <a class="navbar-item" href="/event-tiers.html">
+          Event
         </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
@@ -74,7 +76,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary snipcart-checkout">
+            <a class="button snipcart-checkout">
               <strong>Cart</strong>
             </a>
             <a class="button is-light">
@@ -128,6 +130,9 @@ $ 450
 <!-- snipcart public test API  -->
 <div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
+
+<!-- ionicons because why not use something other than fontawesome once in a while -->
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
