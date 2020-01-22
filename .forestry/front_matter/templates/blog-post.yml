@@ -16,5 +16,3 @@ fields:
 - type: text
   name: categories
   label: categories
-pages:
-- _posts/the-reclusiveness-of-kraftwerk-1.md
