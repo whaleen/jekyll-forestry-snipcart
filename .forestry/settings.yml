@@ -11,6 +11,7 @@ sections:
   label: Posts
   create: all
   templates:
+  - blog-post
   - product
 - type: directory
   path: _products
