@@ -14,5 +14,6 @@ images:
 - "/uploads/diver-under-the-sea-887826.jpg"
 layout: product
 featured_image: "/uploads/underwater-photography-of-woman-2404365.jpg"
+date: 2020-01-01 08:00:00 +0000
 
 ---
