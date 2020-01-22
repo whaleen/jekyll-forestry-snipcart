@@ -7,5 +7,6 @@ description: "Access to all lectures on the event calendar and including an invi
 featured_image: "/uploads/people-inside-a-cafe-with-tables-and-chairs-860227.jpg"
 images: []
 price: 1599
+date: 2020-01-02 08:00:00 +0000
 
 ---
