@@ -43,6 +43,7 @@ fields:
   label: Layout
   default: product
 pages:
+- _posts/the-reclusiveness-of-kraftwerk.md
 - _products/fashion-sense.md
 - _products/nice-horse.md
 - _products/swimming-lessons.md
