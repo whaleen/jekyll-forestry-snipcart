@@ -12,6 +12,7 @@ sections:
   create: all
   templates:
   - blog-post
+  - blog-post
   - product
 - type: directory
   path: _products
