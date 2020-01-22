@@ -18,11 +18,18 @@ test
 </div>
 
         </article>
-        <article class="tile is-child">
-          <p class="title">Tiles &amp; Whatnot</p>
-          <p class="subtitle">Bottom tile</p>
-          <p>dsfjshdlkjfhalskdjfhlkajsdhf hjklsdlkh gkhjsg ksdjhfg skjhdfg skjhdfg ksjf gksjdg fkjs dfghk sjdhfg  hsdjgf kajhgf kasjdhfg askjhdfg akjhsdgf kajshdgf akjshdfg kjhasfgka sjdhgfk ahjsdg fkj  aksjd flaksdfhlaks djfh kjhlkjh lkjad kasdl kjhasdl kjas lk has lkj akd h wlioufh qliugh lwiurgh aiuhgla eiurbv laieurv ,kunrl viualkjvanleiurnliauenv laeurh lauehr ;iouher;giou ehslriug helsirug sl;ieunb ;seoun lwieuh jhg fuywge fkuygw vkhse vkuybwekuvyb skeurbvy ksehjbrvkusybek ruvybks eurbkv uyb</p>
-        </article>
+
+
+          <article class="tile is-child">
+            {% for post in site.posts %}
+            <a href="{{ post.url }}">
+            <p class="title">{{ post.title }}</p>
+            </a>
+            <p class="subtitle">{{ post.categories }}</p>
+            <p>{{ post.excerpt | truncatewords: 15 }}</p>
+              {% endfor %}
+          </article>
+
       </div>
       <div class="tile is-parent">
         <article class="tile is-child box">
