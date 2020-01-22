@@ -2,6 +2,15 @@
 label: Product
 hide_body: false
 fields:
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 - name: title
   type: text
   config:
