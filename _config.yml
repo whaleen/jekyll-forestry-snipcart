@@ -17,6 +17,10 @@ collections:
     output: true
     permalink: "/event-tiers/:path/"
 
+################################
+# Analytics Settings
+################################
+google_tag_manager: UA-XXXXXXXX-N  
 
 # Exclude from processing.
 # The following items will not be processed, by default.

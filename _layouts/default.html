@@ -6,15 +6,17 @@
 </head>
 
 <body class="has-margin-25">
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+
+  <!-- Google Tag Manager (noscript) {% endcomment %} -->
+  {% if site.google_tag_manager and jekyll.environment == 'production' %}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {% endif %}
 
   <!-- Add your site or application content here -->
   {% include nav.html %}
 
   {{ content }}
-
 
 
 <footer class="footer">
