@@ -1,7 +1,31 @@
 ---
 layout: default
 ---
-test
+
+
+<div class="card">
+  <div class="card-content">
+    <p class="title">
+      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+    </p>
+    <p class="subtitle">
+      Jeff Atwood
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+      </span>
+    </p>
+    <p class="card-footer-item">
+      <span>
+        Share on <a href="#">Facebook</a>
+      </span>
+    </p>
+  </footer>
+</div>
+
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
@@ -19,13 +43,14 @@ test
 
         </article>
 
-
+          <!-- Most recent blog post -->
           <article class="tile is-child">
             {% for post in site.posts %}
+            {{post.date | date_to_long_string }}
             <a href="{{ post.url }}">
             <p class="title">{{ post.title }}</p>
             </a>
-            <p class="subtitle">{{ post.categories }}</p>
+            <p class="subtitle has-text-grey-lighter">{{ post.categories }}</p>
             <p>{{ post.excerpt | truncatewords: 15 }}</p>
               {% endfor %}
           </article>

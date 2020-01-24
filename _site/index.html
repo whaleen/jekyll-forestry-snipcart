@@ -23,14 +23,13 @@
 
 </head>
 
-<body>
+<body class="has-margin-25">
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
   <!-- Add your site or application content here -->
-<div class="container">
-    <nav class="navbar has-padding-25" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
         JEKYLL-FORESTRY-SNIPCART
@@ -92,7 +91,29 @@
   </nav>
 
 
-  test
+  <div class="card">
+  <div class="card-content">
+    <p class="title">
+      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+    </p>
+    <p class="subtitle">
+      Jeff Atwood
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+      </span>
+    </p>
+    <p class="card-footer-item">
+      <span>
+        Share on <a href="#">Facebook</a>
+      </span>
+    </p>
+  </footer>
+</div>
+
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
@@ -110,13 +131,14 @@
 
         </article>
 
-
+          <!-- Most recent blog post -->
           <article class="tile is-child">
             
+            01 January 2020
             <a href="/kruatrock/2020/01/01/the-reclusiveness-of-kraftwerk-1.html">
             <p class="title">The Reclusiveness of Kraftwerk</p>
             </a>
-            <p class="subtitle">kruatrock</p>
+            <p class="subtitle has-text-grey-lighter">kruatrock</p>
             <p><p>The band is notoriously reclusive, providing rare and enigmatic interviews, using life-size mannequins and robots...</p>
               
           </article>
@@ -125,10 +147,10 @@
       <div class="tile is-parent">
         <article class="tile is-child box">
           
-          <p class="title">Fashion Sense - $1172</p>
-          <p class="subtitle">She gazed into my soul; her eyes of liquid amber scrutinising things inside of which I could only dream of seeing in myself. She was a mystery. A dangerously beautiful mystery, and I was ensnared...</p>
+          <p class="title">Swimming Lessons - $450</p>
+          <p class="subtitle">I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight,...</p>
           <figure class="image">
-            <img src="/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg">
+            <img src="/uploads/underwater-photography-of-woman-2404365.jpg">
           </figure>
           
         </article>
@@ -158,13 +180,13 @@
 <div class="columns">
   
     <div class="column box">
-      <h1><a class="title is-1 black" href="/products/fashion-sense/">Fashion Sense</a></h1>
-      She gazed into my soul; her eyes of liquid amber scrutinising things inside of which I could only dream of seeing in myself. She was a mystery. A dangerously beautiful mystery, and I was ensnared in the trap which she'd set. <br><strong>$ 1172 -</strong> <img src="/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg">
+      <h1><a class="title is-1 black" href="/products/swimming-lessons/">Swimming Lessons</a></h1>
+      I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer. <br><strong>$ 450 -</strong> <img src="/uploads/underwater-photography-of-woman-2404365.jpg">
     </div>
   
 </div>
 
-</div>
+
 
 
 <footer class="footer">
@@ -178,8 +200,22 @@
 </footer>
 
 
-<!-- jQuery required by snipcart-->
+<!-- jQuery required by snipcart and Bluma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+
+    });
+  });
+</script>
 
 <!-- snipcart -->
 <!-- snipcart public test API  -->

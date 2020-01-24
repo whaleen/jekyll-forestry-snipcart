@@ -27,7 +27,7 @@
 
   <!-- Add your site or application content here -->
 <div class="container">
-    <nav class="navbar has-padding-25" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
         JEKYLL-FORESTRY-SNIPCART
@@ -113,8 +113,22 @@ $ 1599
 </div><!-- /container -->
 
 
-<!-- jQuery required by snipcart-->
+<!-- jQuery required by snipcart and Bluma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+
+    });
+  });
+</script>
 
 <!-- snipcart -->
 <!-- snipcart public test API  -->

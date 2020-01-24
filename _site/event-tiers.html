@@ -23,14 +23,13 @@
 
 </head>
 
-<body>
+<body class="has-margin-25">
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
   <!-- Add your site or application content here -->
-<div class="container">
-    <nav class="navbar has-padding-25" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
         JEKYLL-FORESTRY-SNIPCART
@@ -93,67 +92,99 @@
 
 
   <hr>
-
-
-
-
-
-  <h1></h1>
-  <p>
-</p>
-
-  <h1></h1>
-  <p>
-</p>
-
-  <h1></h1>
-  <p>
-</p>
-
-
+<h1 class="title is-1">Event</h1>
 <hr>
-<div class="has-margin-25">
 
-<div class="columns">
-  
-    <div class="column box has-padding-25">
-      <h1><a class="title is-1 black" href="/event-tiers/most-honorable-attendee/">Most Honorable Attendee</a></h1>
-      Access to all lectures on the event calendar and including an invitation to all 
+
+
+<div class="">
+
+  <div class="columns">
+    
+
+    <div class="column has-padding-35">
+
+      <div class="card">
+
+        <div class="card-content">
+          <h1 class="content"><a class="title is-1 black" href="/event-tiers/very-distinguished-guest/">Very Distinguished Guest</a></h1>
+          <hr />
+          <div class="content">
+            Access to all lectures and presentations on both Saturday and Sunday. Includes tickets to the Sunday night dinner.
+          </div>
+          <a class="title is-1 black" href="/event-tiers/very-distinguished-guest/">
+            <img class="content" src="/uploads/adult-art-art-exhibition-art-fair-112472.jpg">
+          </a>
+        </div>
+
+        <footer class="card-footer">
+          <a href="/event-tiers/very-distinguished-guest/" class="card-footer-item has-text-black"><strong>&dollar; 799</strong></a>
+          <a href="/event-tiers/very-distinguished-guest/" class="card-footer-item has-text-black">&ddagger; Information</a>
+        </footer>
+
+      </div>
+    </div>
+
+
+    
+
+    <div class="column has-padding-35">
+
+      <div class="card">
+
+        <div class="card-content">
+          <h1 class="content"><a class="title is-1 black" href="/event-tiers/most-honorable-attendee/">Most Honorable Attendee</a></h1>
+          <hr />
+          <div class="content">
+            Access to all lectures on the event calendar and including an invitation to all 
  morning and evening social meals and the social networking workshops following each meal. 
+          </div>
+          <a class="title is-1 black" href="/event-tiers/most-honorable-attendee/">
+            <img class="content" src="/uploads/people-inside-a-cafe-with-tables-and-chairs-860227.jpg">
+          </a>
+        </div>
 
-      <div class="has-padding-top-15">
-        <strong> 1599</strong>
+        <footer class="card-footer">
+          <a href="/event-tiers/most-honorable-attendee/" class="card-footer-item has-text-black"><strong>&dollar; 1599</strong></a>
+          <a href="/event-tiers/most-honorable-attendee/" class="card-footer-item has-text-black">&ddagger; Information</a>
+        </footer>
+
       </div>
-
-        <img class="has-padding-top-15" src="/uploads/people-inside-a-cafe-with-tables-and-chairs-860227.jpg">
     </div>
-  
-    <div class="column box has-padding-25">
-      <h1><a class="title is-1 black" href="/event-tiers/mr-fancy-pants/">Mr Fancy Pants</a></h1>
-      Let's face it. Your just coming so you can flex on the n00bs. We'll throw in a free room for the three nights which we've already paid off at fraction of the cost.
 
-      <div class="has-padding-top-15">
-        <strong> 2199</strong>
+
+    
+
+    <div class="column has-padding-35">
+
+      <div class="card">
+
+        <div class="card-content">
+          <h1 class="content"><a class="title is-1 black" href="/event-tiers/mr-fancy-pants/">Mr Fancy Pants</a></h1>
+          <hr />
+          <div class="content">
+            Let's face it. Your just coming so you can flex on the n00bs. We'll throw in a free room for the three nights which we've already paid off at fraction of the cost.
+          </div>
+          <a class="title is-1 black" href="/event-tiers/mr-fancy-pants/">
+            <img class="content" src="/uploads/group-of-people-in-art-exhibit-716281.jpg">
+          </a>
+        </div>
+
+        <footer class="card-footer">
+          <a href="/event-tiers/mr-fancy-pants/" class="card-footer-item has-text-black"><strong>&dollar; 2199</strong></a>
+          <a href="/event-tiers/mr-fancy-pants/" class="card-footer-item has-text-black">&ddagger; Information</a>
+        </footer>
+
       </div>
-
-        <img class="has-padding-top-15" src="/uploads/group-of-people-in-art-exhibit-716281.jpg">
     </div>
-  
-    <div class="column box has-padding-25">
-      <h1><a class="title is-1 black" href="/event-tiers/very-distinguished-guest/">Very Distinguished Guest</a></h1>
-      Access to all lectures and presentations on both Saturday and Sunday. Includes tickets to the Sunday night dinner.
 
-      <div class="has-padding-top-15">
-        <strong> 799</strong>
-      </div>
 
-        <img class="has-padding-top-15" src="/uploads/adult-art-art-exhibition-art-fair-112472.jpg">
-    </div>
-  
-</div>
-</div>
+    
+  </div>
 
 </div>
+
+
 
 
 <footer class="footer">
@@ -167,8 +198,22 @@
 </footer>
 
 
-<!-- jQuery required by snipcart-->
+<!-- jQuery required by snipcart and Bluma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+
+    });
+  });
+</script>
 
 <!-- snipcart -->
 <!-- snipcart public test API  -->

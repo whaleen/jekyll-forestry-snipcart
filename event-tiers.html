@@ -1,31 +1,43 @@
 ---
 layout: default
 ---
+
+<hr>
+<h1 class="title is-1">Event</h1>
 <hr>
 
 
 
-{% assign sorted = site.products | reverse %}
-{% for item in sorted %}
-  <h1>{{ item.name }}</h1>
-  <p>{{ item.content }}</p>
-{% endfor %}
+<div class="">
 
-<hr>
-<div class="has-margin-25">
+  <div class="columns">
+    {% for event in site.event-tiers %}
 
-<div class="columns">
-  {% for event in site.event-tiers %}
-    <div class="column box has-padding-25">
-      <h1><a class="title is-1 black" href="{{ event.url }}">{{ event.title }}</a></h1>
-      {{ event.description }}
+    <div class="column has-padding-35">
 
-      <div class="has-padding-top-15">
-        <strong> {{ event.price }}</strong>
+      <div class="card">
+
+        <div class="card-content">
+          <h1 class="content"><a class="title is-1 black" href="{{ event.url }}">{{ event.title }}</a></h1>
+          <hr />
+          <div class="content">
+            {{ event.description }}
+          </div>
+          <a class="title is-1 black" href="{{ event.url }}">
+            <img class="content" src="{{ event.featured_image }}">
+          </a>
+        </div>
+
+        <footer class="card-footer">
+          <a href="{{ event.url }}" class="card-footer-item has-text-black"><strong>&dollar; {{ event.price }}</strong></a>
+          <a href="{{ event.url }}" class="card-footer-item has-text-black">&ddagger; Information</a>
+        </footer>
+
       </div>
-
-        <img class="has-padding-top-15" src="{{ event.featured_image }}">
     </div>
-  {% endfor %}
-</div>
+
+
+    {% endfor %}
+  </div>
+
 </div>
