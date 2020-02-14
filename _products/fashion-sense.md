@@ -10,5 +10,8 @@ images:
 layout: product
 featured_image: "/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg"
 date: 2020-01-03T08:00:00.000+00:00
+categories:
+- fashion
+sale_price: 
 
 ---
