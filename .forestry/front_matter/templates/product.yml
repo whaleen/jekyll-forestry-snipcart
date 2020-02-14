@@ -16,6 +16,10 @@ fields:
   config:
     required: false
   label: Title
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
 - name: description
   type: textarea
   default: ''
