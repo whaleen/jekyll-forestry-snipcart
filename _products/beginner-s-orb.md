@@ -6,5 +6,8 @@ description: 'Entry level orb. Fun at parties and other places where orbs can be
 price: 47.0
 featured_image: "/uploads/person-holding-ball-night-lamp-while-sitting-3043798.jpg"
 images: []
+categories:
+- parties
+sale_price: 
 
 ---
