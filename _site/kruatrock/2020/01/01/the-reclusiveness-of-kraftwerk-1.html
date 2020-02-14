@@ -3,16 +3,28 @@
 
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>jekyll-forestry-snipcart</title>
 <meta name="description" content="This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-<link rel="stylesheet" href="http://localhost:4000/css/bulma-helpers.min.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="http://localhost:4000/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/css/okko-lightbox.css">
+
+<style>
+
+</style>
 
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
+
+<style>
+  .snipcart-layout, .snipcart-modal, .snipcart-cart-header, .snipcart-cart__footer, snipcart-cart__content, .snipcart-item-list {background-color: #fff;}
+  .snipcart-featured-payment-methods__link {
+    display: none;
+}
+</style>
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
@@ -24,74 +36,57 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
 <div class="container">
-  <!-- z-index on this element insures that the snipcart overlay display correctly. 
-  Without it, it slides in under this container -->
-<div class="container" style="z-index: 1;">
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="http://localhost:4000">
-        JEKYLL-FORESTRY-SNIPCART
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <a class="navbar-brand" href="http://localhost:4000">JEKYLL-FORESTRY-SNIPCART</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:4000/products/">Products <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/event-tiers">Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/news/">News</a>
+        </li>
+      </ul>
+      <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
+        Cart <ion-icon name="cart"></ion-icon>
       </a>
-
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/products.html">
-          Products
-        </a>
-
-        <a class="navbar-item" href="/event-tiers.html">
-          Event
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-white is-large snipcart-checkout">
-              <ion-icon name="cart"></ion-icon>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   </nav>
 </div>
 
 
-<h1 class="title is-1">The Reclusiveness of Kraftwerk</h1>
+<div class="container p-3">
 
-<p>The band is notoriously reclusive, providing rare and enigmatic interviews, using life-size mannequins and robots to conduct official photo shoots, refusing to accept mail and not allowing visitors at the <a href="https://en.wikipedia.org/wiki/Kling_Klang_Studio" title="Kling Klang Studio">Kling Klang Studio</a>, the precise location of which they used to keep secret.</p>
+
+    <div class="clearfix">
+    <button type="button" class="btn float-left">
+      
+      <a href="/2013/08/16/markup-syntax-highlighting.html">&laquo;&nbsp;Markup: Syntax Highlighting</a>
+      
+    </button>
+    <button type="button" class="btn float-right">
+      
+    </button>
+  </div>
+
+</div>
+
+<div class="container p-4">
+<h1 class="">The Reclusiveness of Kraftwerk</h1>
+</div>
+
+<div class="container p-4">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <p>The band is notoriously reclusive, providing rare and enigmatic interviews, using life-size mannequins and robots to conduct official photo shoots, refusing to accept mail and not allowing visitors at the <a href="https://en.wikipedia.org/wiki/Kling_Klang_Studio" title="Kling Klang Studio">Kling Klang Studio</a>, the precise location of which they used to keep secret.</p>
 
 <p>Another notable example of this eccentric behaviour was reported to <a href="https://en.wikipedia.org/wiki/Johnny_Marr" title="Johnny Marr">Johnny Marr</a> of <a href="https://en.wikipedia.org/wiki/The_Smiths" title="The Smiths">the Smiths</a> by Karl Bartos, who explained that anyone trying to contact the band for collaboration would be told the studio telephone did not have a ringer since while recording, the band did not like to hear any kind of noise pollution. Instead, callers were instructed to phone the studio precisely at a certain time, whereupon the phone would be answered by Ralf Hütter, despite never hearing the phone ring.</p>
 
@@ -100,41 +95,49 @@
 <video src="http://localhost:4000/video/kraftwerk_mit_tanzmusik_1973_im_zdf_aspekte_studio_UIbSkw4yvec_360p.mp4" controls="">
 </video>
 
+    </div>
+  </div>
+</div>
 
 
-<!-- https://gist.github.com/opattison/6191106 -->
-<section class="photos">
-  
-</section>
+<div class="container p-4">
+<div class="post-nav">
+  <div>
+    
+    <a href="/2013/08/16/markup-syntax-highlighting.html">&laquo;&nbsp;Markup: Syntax Highlighting</a>
+    
+  </div>
+  <div class="post-nav-next">
+    
+  </div>
+</div>
+</div>
 
-</div><!-- /container -->
+
+<!-- jQuery and Bootstrap /node_modules/* -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-<!-- jQuery required by snipcart and Bulma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-
-<!-- This is for Bulma's navbar hamburger  -->
+<script src="http://localhost:4000/js/ekko-lightbox.js"></script>
 <script>
-  $(document).ready(function() {
-
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        $(".navbar-burger").toggleClass("is-active");
-        $(".navbar-menu").toggleClass("is-active");
-
-    });
-  });
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                  event.preventDefault();
+                  $(this).ekkoLightbox();
+              });
 </script>
 
-<!-- snipcart -->
+
+
+<!-- Snipcart -->
 <!-- snipcart public test API  -->
 <div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
+
+
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
 
-<!-- ionicons because why not use something other than fontawesome and see what happens -->
+<!-- Ionicons -->
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

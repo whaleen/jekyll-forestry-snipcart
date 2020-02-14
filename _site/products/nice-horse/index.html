@@ -3,16 +3,28 @@
 
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>jekyll-forestry-snipcart</title>
 <meta name="description" content="This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-<link rel="stylesheet" href="http://localhost:4000/css/bulma-helpers.min.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="http://localhost:4000/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/css/okko-lightbox.css">
+
+<style>
+
+</style>
 
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
+
+<style>
+  .snipcart-layout, .snipcart-modal, .snipcart-cart-header, .snipcart-cart__footer, snipcart-cart__content, .snipcart-item-list {background-color: #fff;}
+  .snipcart-featured-payment-methods__link {
+    display: none;
+}
+</style>
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
@@ -25,129 +37,139 @@
 <body>
 
   <!-- Add your site or application content here -->
-<div class="container">
-  <!-- z-index on this element insures that the snipcart overlay display correctly. 
-  Without it, it slides in under this container -->
-<div class="container" style="z-index: 1;">
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="http://localhost:4000">
-        JEKYLL-FORESTRY-SNIPCART
+
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <a class="navbar-brand" href="http://localhost:4000">JEKYLL-FORESTRY-SNIPCART</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:4000/products/">Products <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/event-tiers">Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/news/">News</a>
+        </li>
+      </ul>
+      <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
+        Cart <ion-icon name="cart"></ion-icon>
       </a>
-
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/products.html">
-          Products
-        </a>
-
-        <a class="navbar-item" href="/event-tiers.html">
-          Event
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-white is-large snipcart-checkout">
-              <ion-icon name="cart"></ion-icon>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   </nav>
 </div>
 
 
-<h1 class="title is-1">Nice Horse</h1>
-$ 2500
-<p>She is my pride and joy. With soft eyes that you could stare into forever, falling, but at the same time so still, they reflected promise. A heart made of love, slender profile, and a gorgeous chestnut coat, Juliette was always there for me in the darkest days, when it felt like my life was a hurricane in an endless sea. I will never forget the days I spent with her, cantering in a field full of daisies, under a clear blue sky.</p>
+<div class="container p-4">
 
-<button class="snipcart-add-item button is-black"
-  data-item-id="nice-horse"
-  data-item-price="2500"
-  data-item-url="/products/nice-horse/"
-  data-item-description="She is my pride and joy. With soft eyes that you could stare into forever, falling, but at the same time so still, they reflected promise. A heart made of love, slender profile, and a gorgeous chestnut coat, Juliette was always there for me in the darkest days, when it felt like my life was a hurricane in an endless sea. I will never forget the days I spent with her, cantering in a field full of daisies, under a clear blue sky."
-  data-item-image="/uploads/white-horse-standing-on-green-grass-field-850424.jpg"
-  data-item-name="Nice Horse">
-  Add to cart
-</button>
+  <div class="row">
+
+    <div class="col-6">
+      <h1 class="title is-1">Nice Horse</h1>
+
+      
+      <strike><strong>$ 2500</strong></strike>  <strong>$ 1700</strong>
+      
+
+      <p>She is my pride and joy. With soft eyes that you could stare into forever, falling, but at the same time so still, they reflected promise. A heart made of love, slender profile, and a gorgeous chestnut coat, Juliette was always there for me in the darkest days, when it felt like my life was a hurricane in an endless sea. I will never forget the days I spent with her, cantering in a field full of daisies, under a clear blue sky.</p>
+
+      <button class="snipcart-add-item btn btn-primary border-0 rounded-0 bg-dark"
+        data-item-id="nice-horse"
+        data-item-price="1700"
+        data-item-url="/products/nice-horse/"
+        data-item-description="She is my pride and joy. With soft eyes that you could stare into forever, falling, but at the same time so still, they reflected promise. A heart made of love, slender profile, and a gorgeous chestnut coat, Juliette was always there for me in the darkest days, when it felt like my life was a hurricane in an endless sea. I will never forget the days I spent with her, cantering in a field full of daisies, under a clear blue sky."
+        data-item-image="/uploads/white-horse-standing-on-green-grass-field-850424.jpg"
+        data-item-name="Nice Horse">
+        Add to cart
+      </button>
+    </div>
+
+    <div class="col-6">
+      <a href="http://localhost:4000/uploads/white-horse-standing-on-green-grass-field-850424.jpg"data-toggle="lightbox" data-gallery="nice-horse-gallery">
+      <img class="img-fluid" src="http://localhost:4000/uploads/white-horse-standing-on-green-grass-field-850424.jpg" />
+      </a>
+      <hr />
+      <div class="row">
+        <section class="col-3">
+           <!-- Loop through the photos from YAML frontmatter -->
+          <a href="http://localhost:4000/uploads/white-horse-standing-on-green-grass-field-850424.jpg"data-toggle="lightbox" data-gallery="nice-horse-gallery">
+            <img class="img-fluid" src="/uploads/white-horse-standing-on-green-grass-field-850424.jpg" >
+          </a>
+           <!-- Loop through the photos from YAML frontmatter -->
+          <a href="http://localhost:4000/uploads/photo-of-brown-and-white-foal-lying-on-grass-field-2364620.jpg"data-toggle="lightbox" data-gallery="nice-horse-gallery">
+            <img class="img-fluid" src="/uploads/photo-of-brown-and-white-foal-lying-on-grass-field-2364620.jpg" >
+          </a>
+           <!-- Loop through the photos from YAML frontmatter -->
+          <a href="http://localhost:4000/uploads/photo-of-a-group-of-horses-2123766.jpg"data-toggle="lightbox" data-gallery="nice-horse-gallery">
+            <img class="img-fluid" src="/uploads/photo-of-a-group-of-horses-2123766.jpg" >
+          </a>
+          
+        </section>
+      </div>
+
+    </div>
+
+  </div>
 
 <!-- https://gist.github.com/opattison/6191106 -->
-<section class="photos">
-   <!-- Loop through the photos from YAML frontmatter -->
-  <figure>
-    <img src="/uploads/white-horse-standing-on-green-grass-field-850424.jpg" >
-  </figure>
-   <!-- Loop through the photos from YAML frontmatter -->
-  <figure>
-    <img src="/uploads/photo-of-brown-and-white-foal-lying-on-grass-field-2364620.jpg" >
-  </figure>
-   <!-- Loop through the photos from YAML frontmatter -->
-  <figure>
-    <img src="/uploads/photo-of-a-group-of-horses-2123766.jpg" >
-  </figure>
-  
-</section>
 
 </div><!-- /container -->
 
+<hr />
 
-<!-- jQuery required by snipcart and Bulma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<div class="container">
+  <p>
+    Make these related by category
+  </p>
+  
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/swimming-lessons/">Swimming Lessons - <strong>$ 450</strong></a></h2>
+
+  
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/nice-horse/">Nice Horse - <strong>$ 2500</strong></a></h2>
+
+  
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/fashion-sense/">Fashion Sense - <strong>$ 1172</strong></a></h2>
+
+  
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/beginner-s-orb/">Beginner's Orb - <strong>$ 47.0</strong></a></h2>
+
+  
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/bitter-solitude/">Bitter Solitude - <strong>$ 175</strong></a></h2>
+
+  
+
+</div>
 
 
-<!-- This is for Bulma's navbar hamburger  -->
+<!-- jQuery and Bootstrap /node_modules/* -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<script src="http://localhost:4000/js/ekko-lightbox.js"></script>
 <script>
-  $(document).ready(function() {
-
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        $(".navbar-burger").toggleClass("is-active");
-        $(".navbar-menu").toggleClass("is-active");
-
-    });
-  });
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                  event.preventDefault();
+                  $(this).ekkoLightbox();
+              });
 </script>
 
-<!-- snipcart -->
+
+
+<!-- Snipcart -->
 <!-- snipcart public test API  -->
 <div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
+
+
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
 
-<!-- ionicons because why not use something other than fontawesome and see what happens -->
+<!-- Ionicons -->
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

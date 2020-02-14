@@ -7,25 +7,53 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
-<div class="container">
-  {% include nav.html %}
+{% include nav.html %}
 
-<h1 class="title is-1">{{ page.title }}</h1>
-
-{{ content }}
+<div class="container p-3">
 
 
-<!-- https://gist.github.com/opattison/6191106 -->
-<section class="photos">
-  {% for image in page.images %} <!-- Loop through the photos from YAML frontmatter -->
-  <figure>
-    <img src="{{ page.images[forloop.index0] }}" >
-  </figure>
-  {% endfor %}
-</section>
+    <div class="clearfix">
+    <button type="button" class="btn float-left">
+      {% if page.previous.url %}
+      <a href="{{page.previous.url}}">&laquo;&nbsp;{{page.previous.title}}</a>
+      {% endif %}
+    </button>
+    <button type="button" class="btn float-right">
+      {% if page.next.url %}
+      <a href="{{page.next.url}}">{{page.next.title}}&nbsp;&raquo;</a>
+      {% endif %}
+    </button>
+  </div>
 
-</div><!-- /container -->
+</div>
+
+<div class="container p-4">
+<h1 class="">{{ page.title }}</h1>
+</div>
+
+<div class="container p-4">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+
+<div class="container p-4">
+<div class="post-nav">
+  <div>
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}">&laquo;&nbsp;{{page.previous.title}}</a>
+    {% endif %}
+  </div>
+  <div class="post-nav-next">
+    {% if page.next.url %}
+    <a href="{{page.next.url}}">{{page.next.title}}&nbsp;&raquo;</a>
+    {% endif %}
+  </div>
+</div>
+</div>
 
 {% include scripts.html %}
 

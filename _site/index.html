@@ -1,18 +1,34 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" style="background: url(http://localhost:4000/img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
 
 <head>
   <meta charset="utf-8">
-<title></title>
+<title>jekyll-forestry-snipcart</title>
 <meta name="description" content="This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-<link rel="stylesheet" href="http://localhost:4000/css/bulma-helpers.min.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="http://localhost:4000/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/css/okko-lightbox.css">
+
+<style>
+
+</style>
 
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
+
+<style>
+  .snipcart-layout, .snipcart-modal, .snipcart-cart-header, .snipcart-cart__footer, snipcart-cart__content, .snipcart-item-list {background-color: #fff;}
+  .snipcart-featured-payment-methods__link {
+    display: none;
+}
+</style>
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
@@ -22,76 +38,38 @@
 
 </head>
 
-<body class="">
-
-  <!-- Google Tag Manager -->
-  
+<body>
 
   <!-- Add your site or application content here -->
-  <!-- z-index on this element insures that the snipcart overlay display correctly. 
-  Without it, it slides in under this container -->
-<div class="container" style="z-index: 1;">
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="http://localhost:4000">
-        JEKYLL-FORESTRY-SNIPCART
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <a class="navbar-brand" href="http://localhost:4000">JEKYLL-FORESTRY-SNIPCART</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:4000/products/">Products <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/event-tiers">Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/news/">News</a>
+        </li>
+      </ul>
+      <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
+        Cart <ion-icon name="cart"></ion-icon>
       </a>
-
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/products.html">
-          Products
-        </a>
-
-        <a class="navbar-item" href="/event-tiers.html">
-          Event
-        </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              About
-            </a>
-            <a class="navbar-item">
-              Jobs
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-white is-large snipcart-checkout">
-              <ion-icon name="cart"></ion-icon>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   </nav>
 </div>
 
 
-  <div class="container">
+  <img src="http://localhost:4000/img/vendors.png">
+
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
@@ -118,6 +96,379 @@
             </a>
             <p class="subtitle has-text-grey-lighter">kruatrock</p>
             <p><p>The band is notoriously reclusive, providing rare and enigmatic interviews, using life-size mannequins and robots...</p>
+              
+            16 August 2013
+            <a href="/2013/08/16/markup-syntax-highlighting.html">
+            <p class="title">Markup: Syntax Highlighting</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p>Post displaying the various ways of highlighting code in Markdown.</p>
+              
+            22 May 2013
+            <a href="/2013/05/22/markup-more-images.html">
+            <p class="title">Markup: Another Post with Images</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p>Examples and code for displaying images in posts.</p>
+              
+            11 January 2013
+            <a href="/markup/2013/01/11/markup-html-tags-and-formatting.html">
+            <p class="title">Markup: HTML Tags and Formatting</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Markup</p>
+            <p><p>A variety of common markup showing how the theme styles them.</p>
+
+</p>
+              
+            10 January 2013
+            <a href="/markup/2013/01/10/markup-image-alignment.html">
+            <p class="title">Markup: Image Alignment</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Markup</p>
+            <p><p>Welcome to image alignment! The best way to demonstrate the ebb and flow of the...</p>
+              
+            09 January 2013
+            <a href="/markup/2013/01/09/markup-text-alignment.html">
+            <p class="title">Markup: Text Alignment</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Markup</p>
+            <p><h3 id="default">Default</h3>
+
+</p>
+              
+            05 January 2013
+            <a href="/markup/2013/01/05/markup-title-with-special-characters.html">
+            <p class="title">Markup: Title with Special&nbsp;---&nbsp;Characters</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Markup</p>
+            <p><p>Putting special characters in the title should have no adverse effect on the layout or...</p>
+              
+            05 January 2013
+            <a href="/markdown/2013/01/05/markup-title-with-markup.html">
+            <p class="title">Markup: Title *with* **Markdown**</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Markdown</p>
+            <p><p>Verify that:</p>
+
+</p>
+              
+            22 May 2012
+            <a href="/2012/05/22/markup-text-readability.html">
+            <p class="title">Markup: Text Readability Test</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p>A bunch of text to test readability.</p>
+              
+            15 March 2012
+            <a href="/2012/03/15/layout-sidebar-custom.html">
+            <p class="title">Layout: Sidebar Custom</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p>A post to custom sidebar content.</p>
+              
+            15 March 2012
+            <a href="/layout/uncategorized/2012/03/15/layout-more-tag.html">
+            <p class="title">Layout: More Tag</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This content is before the <a href="http://jekyllrb.com/docs/posts/#post-excerpts">excerpt separator tag</a>.</p>
+
+</p>
+              
+            15 March 2012
+            <a href="/layout/uncategorized/2012/03/15/layout-header-overlay-image.html">
+            <p class="title">Layout: Header Image Overlay</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post should display a <strong>header with an overlay image</strong>, if the theme supports it.</p>...</p>
+              
+            15 March 2012
+            <a href="/layout/uncategorized/2012/03/15/layout-header-overlay-color.html">
+            <p class="title">Layout: Header Overlay with Background Fill</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post should display a <strong>header with a solid background color</strong>, if the theme supports...</p>
+              
+            15 March 2012
+            <a href="/layout/uncategorized/2012/03/15/layout-header-image-vertical.html">
+            <p class="title">Layout: Header Image (Vertical)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post should display a <strong>header image</strong>, if the theme supports it.</p>
+
+</p>
+              
+            15 March 2012
+            <a href="/2012/03/15/layout-header-image-text-readability.html">
+            <p class="title">Layout: Header Image and Text Readability</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p><p>This is a sample post with a large feature image up top and tons of...</p>
+              
+            15 March 2012
+            <a href="/layout/uncategorized/2012/03/15/layout-header-image-horizontal.html">
+            <p class="title">Layout: Header Image (Horizontal)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post should display a <strong>header image</strong>, if the theme supports it.</p>
+
+</p>
+              
+            15 March 2012
+            <a href="/layout/uncategorized/2012/03/15/layout-header-image-external.html">
+            <p class="title">Layout: Header Image (External URL)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post should display a <strong>header image</strong>, if the theme supports it.</p>
+
+</p>
+              
+            15 March 2012
+            <a href="/2012/03/15/layout-author-sidebar-disabled.html">
+            <p class="title">Layout: Author Sidebar Disabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p>A post to test disabling author sidebar.</p>
+              
+            15 March 2012
+            <a href="/2012/03/15/layout-author-override.html">
+            <p class="title">Layout: Author Override</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p>A post to test author overrides using a data file.</p>
+              
+            14 March 2012
+            <a href="/layout/uncategorized/2012/03/14/layout-excerpt-generated.html">
+            <p class="title">Layout: Excerpt (Generated)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This is the post content. Archive-index pages should display an auto-generated excerpt of this content.</p>...</p>
+              
+            14 March 2012
+            <a href="/layout/uncategorized/2012/03/14/layout-excerpt-defined.html">
+            <p class="title">Layout: Excerpt (Defined)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p>This is a user-defined post excerpt. It should be displayed in place of the post...</p>
+              
+            14 March 2012
+            <a href="/layout/uncategorized/2012/03/14/layout-code-excerpt-generated.html">
+            <p class="title">Layout: Code Excerpt (Generated)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This is the post content with inline code, (e.g. <code class="language-plaintext highlighter-rouge">&lt;span style="color: red;"&gt;red&lt;/span&gt;</code>. It...</p>
+              
+            03 January 2012
+            <a href="/layout/uncategorized/2012/01/03/layout-read-time-comments-sharing-related-posts-disabled.html">
+            <p class="title">Layout: Reading Time, Comments, Social Sharing Links, and Related Posts Disabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post has reading time, comments, social sharing links, and related posts disabled.</p>
+
+</p>
+              
+            02 January 2012
+            <a href="/layout/uncategorized/2012/01/02/layout-sharing.html">
+            <p class="title">Layout: Social Sharing Links Enabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post should display social sharing links.</p>
+</p>
+              
+            02 January 2012
+            <a href="/layout/uncategorized/2012/01/02/layout-sharing-disabled.html">
+            <p class="title">Layout: Social Sharing Links Disabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post has social sharing disabled.</p>
+
+</p>
+              
+            02 January 2012
+            <a href="/layout/uncategorized/2012/01/02/layout-related-posts.html">
+            <p class="title">Layout: Related Posts Enabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post has related posts enabled.</p>
+</p>
+              
+            02 January 2012
+            <a href="/layout/uncategorized/2012/01/02/layout-related-posts-disabled.html">
+            <p class="title">Layout: Related Posts Disabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post has related posts disabled.</p>
+
+</p>
+              
+            02 January 2012
+            <a href="/2012/01/02/layout-read-time.html">
+            <p class="title">Layout: Read Time Enabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p><p>This post has reading time enabled. The estimated time that it takes to read this...</p>
+              
+            02 January 2012
+            <a href="/2012/01/02/layout-read-time-disabled.html">
+            <p class="title">Layout: Read Time Disabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter"></p>
+            <p><p>This post has reading time disabled. The estimated time that it takes to read this...</p>
+              
+            02 January 2012
+            <a href="/layout/uncategorized/2012/01/02/layout-comments.html">
+            <p class="title">Layout: Comments Enabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post should display comments.</p>
+</p>
+              
+            02 January 2012
+            <a href="/layout/uncategorized/2012/01/02/layout-comments-disabled.html">
+            <p class="title">Layout: Comments Disabled</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">LayoutUncategorized</p>
+            <p><p>This post has its comments disabled.</p>
+
+</p>
+              
+            10 September 2010
+            <a href="/media/2010/09/10/post-twitter-embeds.html">
+            <p class="title">Post: Twitter Embed</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Media</p>
+            <p><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">🎨 Finally got around to adding all my <a href="https://twitter.com/procreateapp">@procreateapp</a> creations...</p>
+              
+            06 August 2010
+            <a href="/post%20formats/2010/08/06/post-image-linked-caption.html">
+            <p class="title">Post: Image (Linked with Caption)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p>
+</p>
+              
+            05 August 2010
+            <a href="/post%20formats/2010/08/05/post-image-standard.html">
+            <p class="title">Post: Image (Standard)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p>The preferred way of using images is placing them in the <code class="language-plaintext highlighter-rouge">/images/</code> directory...</p>
+              
+            05 August 2010
+            <a href="/post%20formats/2010/08/05/post-image-linked.html">
+            <p class="title">Post: Image (with Link)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p><a href="https://flic.kr/p/8ww3fZ"><img src="https://farm5.staticflickr.com/4073/4939853213_33ffc0290b_b.jpg" alt="foo" /></a></p>
+</p>
+              
+            02 June 2010
+            <a href="/post%20formats/2010/06/02/post-video-youtube.html">
+            <p class="title">Post: Video (YouTube)</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p>YouTube video embed below.</p>
+
+</p>
+              
+            07 March 2010
+            <a href="/post%20formats/2010/03/07/post-link.html">
+            <p class="title">Post: Link</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p>This theme supports <strong>link posts</strong>, made famous by John Gruber. To use, just add <code...</p>
+              
+            05 February 2010
+            <a href="/post%20formats/2010/02/05/post-quote.html">
+            <p class="title">Post: Quote</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><blockquote> <p>Only one thing is impossible for God: To find any sense in any copyright...</p>
+              
+            05 February 2010
+            <a href="/post%20formats/2010/02/05/post-notice.html">
+            <p class="title">Post: Notice</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p>A notice displays information that explains nearby content. Often used to call attention to a...</p>
+              
+            08 January 2010
+            <a href="/post%20formats/2010/01/08/post-chat.html">
+            <p class="title">Post: Chat</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p>Abbott: Strange as it may seem, they give ball players nowadays very peculiar names.</p>
+
+</p>
+              
+            07 January 2010
+            <a href="/post%20formats/2010/01/07/post-standard.html">
+            <p class="title">Post: Standard</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p>All children, except one, grow up. They soon know that they will grow up, and...</p>
+              
+            07 January 2010
+            <a href="/post%20formats/2010/01/07/post-modified.html">
+            <p class="title">Post: Modified Date</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Post Formats</p>
+            <p><p>This post has been updated and should show a modified date if used in a...</p>
+              
+            05 October 2009
+            <a href="/edge%20case/2009/10/05/edge-case-very-long-title.html">
+            <p class="title">Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive 'been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Edge Case</p>
+            <p><p>Check for long titles and how they might break a template.</p>
+</p>
+              
+            05 October 2009
+            <a href="/edge%20case/2009/10/05/edge-case-title-should-not-overflow-the-content-area.html">
+            <p class="title">Antidisestablishmentarianism</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Edge Case</p>
+            <p><h2 id="title-should-not-overflow-the-content-area">Title should not overflow the content area</h2>
+
+</p>
+              
+            05 September 2009
+            <a href="/edge%20case/2009/09/05/edge-case-no-yaml-title.html">
+            <p class="title">Edge Case No Yaml Title</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Edge Case</p>
+            <p><p>This post has no title specified in the YAML Front Matter. Jekyll should auto-generate a...</p>
+              
+            06 August 2009
+            <a href="/edge%20case/2009/08/06/edge-case-no-body-content.html">
+            <p class="title">Edge Case: No Body Content</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Edge Case</p>
+            <p>
+</p>
+              
+            02 July 2009
+            <a href="/aciform/antiquarianism/arrangement/asmodeus/broder/buying/championship/chastening/disinclination/disinfection/dispatch/echappee/enphagy/equipollent/2009/07/02/edge-case-many-categories.html">
+            <p class="title">Edge Case: Many Categories</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">aciformantiquarianismarrangementasmodeusbroderbuyingchampionshipchasteningdisinclinationdisinfectiondispatchechappeeenphagyequipollent</p>
+            <p><p>This post has many categories.</p>
+</p>
+              
+            01 June 2009
+            <a href="/edge%20case/2009/06/01/edge-case-many-tags.html">
+            <p class="title">Edge Case: Many Tags</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Edge Case</p>
+            <p><p>This post has many tags.</p>
+</p>
+              
+            15 May 2009
+            <a href="/edge%20case/2009/05/15/edge-case-nested-and-mixed-lists.html">
+            <p class="title">Edge Case: Nested and Mixed Lists</p>
+            </a>
+            <p class="subtitle has-text-grey-lighter">Edge Case</p>
+            <p><p>Nested and mixed lists are an interesting beast. It’s a corner case to make sure...</p>
               
           </article>
 
@@ -163,9 +514,9 @@
     </div>
   
 </div>
-</div>
 
-  <nav class="navbar is-fixed-bottom" style="background-color: rgb(250, 249, 249);">
+
+  <nav class="navbar is-fixed-bottom">
     <div class="container">
       <footer class="">
         <div class="content has-text-centered">
@@ -179,31 +530,30 @@
    </div>
   </nav>
   
-<!-- jQuery required by snipcart and Bulma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- jQuery and Bootstrap /node_modules/* -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-<!-- This is for Bulma's navbar hamburger  -->
+<script src="http://localhost:4000/js/ekko-lightbox.js"></script>
 <script>
-  $(document).ready(function() {
-
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        $(".navbar-burger").toggleClass("is-active");
-        $(".navbar-menu").toggleClass("is-active");
-
-    });
-  });
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                  event.preventDefault();
+                  $(this).ekkoLightbox();
+              });
 </script>
 
-<!-- snipcart -->
+
+
+<!-- Snipcart -->
 <!-- snipcart public test API  -->
 <div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
+
+
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
 
-<!-- ionicons because why not use something other than fontawesome and see what happens -->
+<!-- Ionicons -->
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

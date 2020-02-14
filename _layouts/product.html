@@ -8,33 +8,70 @@
 <body>
 
   <!-- Add your site or application content here -->
-<div class="container">
+
   {% include nav.html %}
 
-<h1 class="title is-1">{{ page.title }}</h1>
-$ {{ page.price }}
-<p>{{ page.description }}</p>
+<div class="container p-4">
 
-<button class="snipcart-add-item button is-black"
-  data-item-id="{{ page.title | slugify }}"
-  data-item-price="{{ page.price }}"
-  data-item-url="{{ page.url }}"
-  data-item-description="{{ page.description }}"
-  data-item-image="{{ page.featured_image}}"
-  data-item-name="{{ page.title }}">
-  Add to cart
-</button>
+  <div class="row">
+
+    <div class="col-6">
+      <h1 class="title is-1">{{ page.title }}</h1>
+
+      {% if page.sale_price %}
+      <strike><strong>$ {{ page.price }}</strong></strike>  <strong>$ {{ page.sale_price }}</strong>
+      {% else %}
+      <strong>$ {{ page.price }}</strong>
+      {% endif %}
+
+      <p>{{ page.description }}</p>
+
+      <button class="snipcart-add-item btn btn-primary border-0 rounded-0 bg-dark"
+        data-item-id="{{ page.title | slugify }}"
+        data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
+        data-item-url="{{ page.url }}"
+        data-item-description="{{ page.description }}"
+        data-item-image="{{ page.featured_image}}"
+        data-item-name="{{ page.title }}">
+        Add to cart
+      </button>
+    </div>
+
+    <div class="col-6">
+      <a href="{{ site.url }}{{ page.featured_image }}"data-toggle="lightbox" data-gallery="{{ page.title | slugify }}-gallery">
+      <img class="img-fluid" src="{{ site.url }}{{ page.featured_image }}" />
+      </a>
+      <hr />
+      <div class="row">
+        <section class="col-3">
+          {% for image in page.images %} <!-- Loop through the photos from YAML frontmatter -->
+          <a href="{{ site.url }}{{ page.images[forloop.index0] }}"data-toggle="lightbox" data-gallery="{{ page.title | slugify }}-gallery">
+            <img class="img-fluid" src="{{ page.images[forloop.index0] }}" >
+          </a>
+          {% endfor %}
+        </section>
+      </div>
+
+    </div>
+
+  </div>
 
 <!-- https://gist.github.com/opattison/6191106 -->
-<section class="photos">
-  {% for image in page.images %} <!-- Loop through the photos from YAML frontmatter -->
-  <figure>
-    <img src="{{ page.images[forloop.index0] }}" >
-  </figure>
-  {% endfor %}
-</section>
 
 </div><!-- /container -->
+
+<hr />
+
+<div class="container">
+  <p>
+    Make these related by category
+  </p>
+  {% for product in site.products %}
+      <h2 class="border-bottom-2"><a class="text-body" href="{{ product.url }}">{{ product.title }} - <strong>$ {{ product.price }}</strong></a></h2>
+
+  {% endfor %}
+
+</div>
 
 {% include scripts.html %}
 

@@ -1,45 +1,28 @@
 ---
 layout: default
+permalink: /event-tiers/
 ---
 
-<hr>
 <div class="container">
 <h1 class="title is-1">Event</h1>
 </div>
-<hr>
-
-
 
 <div class="container">
 
-  <div class="columns">
+  <div class="row">
     {% for event in site.event-tiers %}
-
-    <div class="column">
-
-      <div class="card">
-
-        <div class="card-content">
-          <h1 class="content"><a class="title is-1 black" href="{{ event.url }}">{{ event.title }}</a></h1>
-          <hr />
-          <div class="content">
+      <div class="col-12 col-lg-4">
+        <a class="is-1 black" href="{{ event.url }}">
+          <img class="img-fluid" src="{{ event.featured_image }}">
+        </a>
+          <h1 class="content"><a class="text-body" href="{{ event.url }}">{{ event.title }}</a></h1>
             {{ event.description }}
-          </div>
-          <a class="title is-1 black" href="{{ event.url }}">
-            <img class="content" src="{{ event.featured_image }}">
-          </a>
-        </div>
-
         <footer class="card-footer">
           <a href="{{ event.url }}" class="card-footer-item has-text-black"><strong>&dollar; {{ event.price }}</strong></a>
           <a href="{{ event.url }}" class="card-footer-item has-text-black">&ddagger; Information</a>
         </footer>
-
       </div>
+      {% endfor %}
     </div>
-
-
-    {% endfor %}
-  </div>
 
 </div>

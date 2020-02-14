@@ -5,6 +5,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+plugins: [jekyll-paginate]
+
+paginate: 6
+paginate_path: "/news/page:num/"
+
 # See /forestry/settings.yml
 # Collections defined here and used by Jekyll, are defined as sections in settings.yml.
 # Also, note the .forestry/front_matter/templates which correspond to any collection/section you use.
@@ -20,7 +25,21 @@ collections:
 ################################
 # Analytics Settings
 ################################
-google_tag_manager: UA-XXXXXXXX-N  
+google_tag_manager: UA-XXXXXXXX-N
+
+
+sass:
+  # loading path from site root
+  # Jekyll defaults to _sass unless specified by sass_dir below
+  sass_dir: node_modules/bootstrap/scss/
+
+  # style : nested (default), compact, compressed, expanded
+  #         :nested, :compact, :compressed, :expanded also works
+  # see http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  # on a typical twitter bootstrap stats are :
+  # nested 138,7kB, compact 129,1kB, expanded 135,9 kB, compressed 122,4 kB
+  style: compressed
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

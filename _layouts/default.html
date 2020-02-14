@@ -1,23 +1,22 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" style="background: url({{ site.url}}/img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
 
 <head>
   {% include head.html %}
 </head>
 
-<body class="">
-
-  <!-- Google Tag Manager -->
-  {% if site.google_tag_manager and jekyll.environment == 'production' %}
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  {% endif %}
+<body>
 
   <!-- Add your site or application content here -->
   {% include nav.html %}
 
   {{ content }}
 
-  <nav class="navbar is-fixed-bottom" style="background-color: rgb(250, 249, 249);">
+  <nav class="navbar is-fixed-bottom">
     <div class="container">
       <footer class="">
         <div class="content has-text-centered">
