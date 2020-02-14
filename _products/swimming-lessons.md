@@ -9,7 +9,6 @@ description: I could swim forever, dive forever, be here in this underwater worl
   then I remember who I am and keep going. I am the rescuer, the swimmer.
 price: 450
 images:
-- "/uploads/underwater-photography-of-woman-2404365.jpg"
 - "/uploads/high-angle-photo-of-person-swimming-3098671.jpg"
 - "/uploads/diver-under-the-sea-887826.jpg"
 layout: product
