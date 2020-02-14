@@ -2,15 +2,10 @@
 <html class="no-js" lang="">
 
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
 <title></title>
 <meta name="description" content="This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- <link rel="manifest" href="site.webmanifest"> -->
-<!-- <link rel="apple-touch-icon" href="icon.png"> -->
-<!-- Place favicon.ico in the root directory -->
-
 
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
@@ -19,21 +14,24 @@
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
-<meta name="theme-color" content="#fafafa">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
 
 <!-- Google Tag Manager -->
 
-  
 
 </head>
 
-<body class="has-margin-25">
+<body class="">
 
+  <!-- Google Tag Manager -->
   
-    
 
   <!-- Add your site or application content here -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- z-index on this element insures that the snipcart overlay display correctly. 
+  Without it, it slides in under this container -->
+<div class="container" style="z-index: 1;">
+<nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
         JEKYLL-FORESTRY-SNIPCART
@@ -82,48 +80,24 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button snipcart-checkout">
-              <strong>Cart</strong>
-            </a>
-            <a class="button is-light">
-              Log in
+            <a class="button is-white is-large snipcart-checkout">
+              <ion-icon name="cart"></ion-icon>
             </a>
           </div>
         </div>
       </div>
     </div>
   </nav>
-
-
-  <div class="card">
-  <div class="card-content">
-    <p class="title">
-      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-    </p>
-    <p class="subtitle">
-      Jeff Atwood
-    </p>
-  </div>
-  <footer class="card-footer">
-    <p class="card-footer-item">
-      <span>
-        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-      </span>
-    </p>
-    <p class="card-footer-item">
-      <span>
-        Share on <a href="#">Facebook</a>
-      </span>
-    </p>
-  </footer>
 </div>
 
+
+  <div class="container">
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
       <div class="tile is-parent is-vertical">
         <article class="tile is-child">
-          <p class="title">Oh Hello</p>
+          <p class="title">Oh Hello There</p>
           <p class="subtitle">This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.</p>
 <img src="http://localhost:4000/img/vendors.png">
           <div>            <a class="button snipcart-checkout">
@@ -189,23 +163,27 @@
     </div>
   
 </div>
+</div>
 
-
-
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>jekyll-forestry-snipcart</strong> by <a href="https://joshuavaage.com">Joshua Vaage</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-    </p>
-  </div>
-</footer>
-
-
-<!-- jQuery required by snipcart and Bluma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
+  <nav class="navbar is-fixed-bottom" style="background-color: rgb(250, 249, 249);">
+    <div class="container">
+      <footer class="">
+        <div class="content has-text-centered">
+          <p>
+            <strong>jekyll-forestry-snipcart</strong> by <a href="https://joshuavaage.com">Joshua Vaage</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+   </div>
+  </nav>
+  
+<!-- jQuery required by snipcart and Bulma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+
+<!-- This is for Bulma's navbar hamburger  -->
 <script>
   $(document).ready(function() {
 
@@ -225,7 +203,7 @@
 <div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
 
-<!-- ionicons because why not use something other than fontawesome once in a while -->
+<!-- ionicons because why not use something other than fontawesome and see what happens -->
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

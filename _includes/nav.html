@@ -1,4 +1,7 @@
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- z-index on this element insures that the snipcart overlay display correctly. 
+  Without it, it slides in under this container -->
+<div class="container" style="z-index: 1;">
+<nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ site.url }}">
         JEKYLL-FORESTRY-SNIPCART
@@ -47,14 +50,12 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button snipcart-checkout">
-              <strong>Cart</strong>
-            </a>
-            <a class="button is-light">
-              Log in
+            <a class="button is-white is-large snipcart-checkout">
+              <ion-icon name="cart"></ion-icon>
             </a>
           </div>
         </div>
       </div>
     </div>
   </nav>
+</div>

@@ -1,3 +1,18 @@
+
+### CSS
+
+Using Bulma. Not overly styled. Strip classes and add a different Framework if you want.
+
+### Developing in the Browser
+
+Serve and re-build on the fly
+``` bundle exec jekyll serve
+```
+
+reload browser when rebuild occurs
+``` browser-sync start --files "css/*.css" --proxy "localhost:4000" --files "_site/*" --reloadDelay "1000"
+```
+
 ### Creating a new Collection
 
 In this case we make the Products collection.

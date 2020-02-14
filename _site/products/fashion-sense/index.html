@@ -7,11 +7,6 @@
 <meta name="description" content="This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <link rel="manifest" href="site.webmanifest"> -->
-<!-- <link rel="apple-touch-icon" href="icon.png"> -->
-<!-- Place favicon.ico in the root directory -->
-
-
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 <link rel="stylesheet" href="http://localhost:4000/css/bulma-helpers.min.css">
@@ -19,11 +14,11 @@
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
-<meta name="theme-color" content="#fafafa">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
 
 <!-- Google Tag Manager -->
 
-  
 
 </head>
 
@@ -31,7 +26,10 @@
 
   <!-- Add your site or application content here -->
 <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- z-index on this element insures that the snipcart overlay display correctly. 
+  Without it, it slides in under this container -->
+<div class="container" style="z-index: 1;">
+<nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://localhost:4000">
         JEKYLL-FORESTRY-SNIPCART
@@ -80,17 +78,15 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button snipcart-checkout">
-              <strong>Cart</strong>
-            </a>
-            <a class="button is-light">
-              Log in
+            <a class="button is-white is-large snipcart-checkout">
+              <ion-icon name="cart"></ion-icon>
             </a>
           </div>
         </div>
       </div>
     </div>
   </nav>
+</div>
 
 
 <h1 class="title is-1">Fashion Sense</h1>
@@ -127,9 +123,11 @@ $ 1172
 </div><!-- /container -->
 
 
-<!-- jQuery required by snipcart and Bluma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
+<!-- jQuery required by snipcart and Bulma's navbar hamburger menu (https://bulma.io/documentation/components/navbar/)-->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+
+<!-- This is for Bulma's navbar hamburger  -->
 <script>
   $(document).ready(function() {
 
@@ -149,7 +147,7 @@ $ 1172
 <div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
 
-<!-- ionicons because why not use something other than fontawesome once in a while -->
+<!-- ionicons because why not use something other than fontawesome and see what happens -->
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

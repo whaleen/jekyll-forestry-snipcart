@@ -3,11 +3,6 @@
 <meta name="description" content="{{ site.description }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <link rel="manifest" href="site.webmanifest"> -->
-<!-- <link rel="apple-touch-icon" href="icon.png"> -->
-<!-- Place favicon.ico in the root directory -->
-
-
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 <link rel="stylesheet" href="{{site.url}}/css/bulma-helpers.min.css">
@@ -15,14 +10,25 @@
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
-<meta name="theme-color" content="#fafafa">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
 
 <!-- Google Tag Manager -->
-{% comment %} Google Tag Manager {% endcomment %}
-  {% if site.google_tag_manager and jekyll.environment == 'production' %}
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','{{ site.google_tag_manager }}');</script>
+{% if site.google_tag_manager and jekyll.environment == 'production' %}
+<script>
+  (function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', '{{ site.google_tag_manager }}');
+</script>
 {% endif %}
