@@ -53,6 +53,7 @@ fields:
   default: product
 pages:
 - _products/beginner-s-orb.md
+- _products/bitter-solitude.md
 - _products/fashion-sense.md
 - _products/nice-horse.md
 - _products/swimming-lessons.md
