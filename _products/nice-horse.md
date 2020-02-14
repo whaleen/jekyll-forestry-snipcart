@@ -15,5 +15,7 @@ layout: product
 featured_image: "/uploads/white-horse-standing-on-green-grass-field-850424.jpg"
 date: 2020-01-02T08:00:00.000+00:00
 sale_price: 1700
+categories:
+- animals
 
 ---
