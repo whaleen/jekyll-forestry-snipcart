@@ -16,6 +16,6 @@ date: 2020-01-02T08:00:00.000+00:00
 sale_price: 1700
 categories:
 - animals
-in_stock: true
+in_stock: false
 
 ---
