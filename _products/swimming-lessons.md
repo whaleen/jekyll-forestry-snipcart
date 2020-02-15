@@ -16,7 +16,13 @@ featured_image: "/uploads/underwater-photography-of-woman-2404365.jpg"
 date: 2020-01-01T08:00:00.000+00:00
 categories:
 - sports
-sale_price: 
+sale_price: ''
 in_stock: true
+product_type: Single
+t-shirt_small_stock_count: 
+t-shirt_medium_stock_count: 
+t-shirt_large_stock_count: 
+size: ''
+stock_count: 100
 
 ---
