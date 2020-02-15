@@ -16,8 +16,7 @@ date: 2020-01-02T08:00:00.000+00:00
 sale_price: 1700
 categories:
 - animals
-in_stock: false
-# Airtable
-stock_count: 0
+in_stock: true
+stock_count: 5000
 
 ---

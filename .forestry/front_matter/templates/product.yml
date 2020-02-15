@@ -15,6 +15,20 @@ fields:
   type: boolean
   label: In Stock
   default: false
+- name: stock_count
+  type: number
+  label: Stock Count
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+  showOnly:
+    field: in_stock
+    value: true
 - name: title
   type: text
   config:
