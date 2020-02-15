@@ -30,7 +30,8 @@ $container-max-widths: (
 
 $dark: #000;
 
-
+$font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
+$line-height-base:            1.7 !default;
 
 // Option A: Include all of Bootstrap
 

@@ -11,45 +11,58 @@
 
   {% include nav.html %}
 
+
 <div class="container p-4">
 
   <div class="row">
 
     <div class="col-6">
-      <h1 class="title is-1">{{ page.title }}</h1>
+      <h1 class="display-1">{{ page.title }}</h1>
+      <button class="btn ">{{ page.categories }}</button><br />
+      <p class="sans p-2">
+          {% if page.sale_price %}
 
-      {% if page.sale_price %}
-      <strike><strong>$ {{ page.price }}</strong></strike>  <strong>$ {{ page.sale_price }}</strong>
-      {% else %}
-      <strong>$ {{ page.price }}</strong>
-      {% endif %}
-
+        <strike><strong class="animated ">$ {{ page.price }}</strong></strike>  <strong class="animated fadeIn delay-3s">$ {{ page.sale_price }}</strong>
+        {% else %}
+        <strong>$ {{ page.price }}</strong>
+        {% endif %}
+      </p>
       <p>{{ page.description }}</p>
 
-      <button class="snipcart-add-item btn btn-primary border-0 rounded-0 bg-dark"
+      <button class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
         data-item-id="{{ page.title | slugify }}"
         data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
         data-item-url="{{ page.url }}"
         data-item-description="{{ page.description }}"
         data-item-image="{{ page.featured_image}}"
         data-item-name="{{ page.title }}">
-        Add to cart
+        Add to Cart
       </button>
+
+      <div class="row">
+        <div class="col-6">
+          <!--  -->
+        </div>
+        <div class="col-6">
+          <!--  -->
+        </div>
+      </div>
+
     </div>
 
     <div class="col-6">
       <a href="{{ site.url }}{{ page.featured_image }}"data-toggle="lightbox" data-gallery="{{ page.title | slugify }}-gallery">
-      <img class="img-fluid" src="{{ site.url }}{{ page.featured_image }}" />
+      <img class="img-fluid rounded" src="{{ site.url }}{{ page.featured_image }}" />
       </a>
-      <hr />
-      <div class="row">
-        <section class="col-3">
-          {% for image in page.images %} <!-- Loop through the photos from YAML frontmatter -->
-          <a href="{{ site.url }}{{ page.images[forloop.index0] }}"data-toggle="lightbox" data-gallery="{{ page.title | slugify }}-gallery">
-            <img class="img-fluid" src="{{ page.images[forloop.index0] }}" >
-          </a>
-          {% endfor %}
-        </section>
+
+      <div class="row pt-4">
+        {% for image in page.images %} <!-- Loop through the photos from YAML frontmatter -->
+          <div class="col-6">
+            <a href="{{ site.url }}{{ page.images[forloop.index0] }}" data-toggle="lightbox" data-gallery="{{ page.title | slugify }}-gallery">
+              <img class="img-fluid rounded" src="{{ page.images[forloop.index0] }}" >
+            </a>
+          </div>
+        {% endfor %}
       </div>
 
     </div>
@@ -64,8 +77,22 @@
 
 <div class="container">
   <p>
-    Make these related by category
+    You might also like:
   </p>
+
+
+
+  {% for product in site.products %}
+  <div class="media">
+    <img class="mr-3 w-25 rounded" src="{{ site.url }}/{{ product.featured_image }}" alt="{{ product.title }}">
+    <div class="media-body">
+      <h5 class="mt-0">{{ product.price }}</h5>
+      {{ product.description }}
+    </div>
+  </div>
+{% endfor %}
+
+
   {% for product in site.products %}
       <h2 class="border-bottom-2"><a class="text-body" href="{{ product.url }}">{{ product.title }} - <strong>$ {{ product.price }}</strong></a></h2>
 

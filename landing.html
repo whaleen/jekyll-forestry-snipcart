@@ -1,0 +1,18 @@
+---
+layout: landing
+permalink: /landing/
+---
+
+
+<div class="container h-100">
+    <!--vertical align on parent using my-auto, horizontal align on self mx-auto-->
+    <div class="row h-100">
+        <div class="col-sm-12 my-auto">
+            <div class="card card-block w-25 mx-auto">
+              {% for product in site.products limit:1 %}
+              <a href="{{ site.url }}/{{ product.url }}">    {{ product.title }}</a>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

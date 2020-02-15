@@ -10,11 +10,20 @@
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="http://localhost:4000/css/main.css">
-<link rel="stylesheet" href="http://localhost:4000/css/okko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/css/ekko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/css/animate.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
 <style>
-
+h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
+body {font-family: 'Lora', serif;}
+.sans {font-family: 'Open Sans', sans-serif;}
+.serif {font-family: 'Lora', serif;}
 </style>
+
+
 
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
@@ -38,8 +47,10 @@
 
   <!-- Add your site or application content here -->
 
-  <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+  <div class="border-bottom">
+
+<div class="container pt-4 pb-4">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="http://localhost:4000">JEKYLL-FORESTRY-SNIPCART</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -57,6 +68,17 @@
           <a class="nav-link" href="http://localhost:4000/news/">News</a>
         </li>
       </ul>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Examples
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="http://localhost:4000/landing/">Landing</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
       <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
         Cart <ion-icon name="cart"></ion-icon>
       </a>
@@ -64,52 +86,64 @@
   </nav>
 </div>
 
+</div>
+
+
 
 <div class="container p-4">
 
   <div class="row">
 
     <div class="col-6">
-      <h1 class="title is-1">Swimming Lessons</h1>
-
-      
-      <strong>$ 450</strong>
-      
-
+      <h1 class="display-1">Swimming Lessons</h1>
+      <button class="btn ">sports</button><br />
+      <p class="sans p-2">
+          
+        <strong>$ 450</strong>
+        
+      </p>
       <p>I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer.</p>
 
-      <button class="snipcart-add-item btn btn-primary border-0 rounded-0 bg-dark"
+      <button class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
         data-item-id="swimming-lessons"
         data-item-price="450"
         data-item-url="/products/swimming-lessons/"
         data-item-description="I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer."
         data-item-image="/uploads/underwater-photography-of-woman-2404365.jpg"
         data-item-name="Swimming Lessons">
-        Add to cart
+        Add to Cart
       </button>
+
+      <div class="row">
+        <div class="col-6">
+          <!--  -->
+        </div>
+        <div class="col-6">
+          <!--  -->
+        </div>
+      </div>
+
     </div>
 
     <div class="col-6">
       <a href="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg"data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
-      <img class="img-fluid" src="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg" />
+      <img class="img-fluid rounded" src="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg" />
       </a>
-      <hr />
-      <div class="row">
-        <section class="col-3">
-           <!-- Loop through the photos from YAML frontmatter -->
-          <a href="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg"data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
-            <img class="img-fluid" src="/uploads/underwater-photography-of-woman-2404365.jpg" >
-          </a>
-           <!-- Loop through the photos from YAML frontmatter -->
-          <a href="http://localhost:4000/uploads/high-angle-photo-of-person-swimming-3098671.jpg"data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
-            <img class="img-fluid" src="/uploads/high-angle-photo-of-person-swimming-3098671.jpg" >
-          </a>
-           <!-- Loop through the photos from YAML frontmatter -->
-          <a href="http://localhost:4000/uploads/diver-under-the-sea-887826.jpg"data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
-            <img class="img-fluid" src="/uploads/diver-under-the-sea-887826.jpg" >
-          </a>
-          
-        </section>
+
+      <div class="row pt-4">
+         <!-- Loop through the photos from YAML frontmatter -->
+          <div class="col-6">
+            <a href="http://localhost:4000/uploads/high-angle-photo-of-person-swimming-3098671.jpg" data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
+              <img class="img-fluid rounded" src="/uploads/high-angle-photo-of-person-swimming-3098671.jpg" >
+            </a>
+          </div>
+         <!-- Loop through the photos from YAML frontmatter -->
+          <div class="col-6">
+            <a href="http://localhost:4000/uploads/diver-under-the-sea-887826.jpg" data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
+              <img class="img-fluid rounded" src="/uploads/diver-under-the-sea-887826.jpg" >
+            </a>
+          </div>
+        
       </div>
 
     </div>
@@ -124,8 +158,54 @@
 
 <div class="container">
   <p>
-    Make these related by category
+    You might also like:
   </p>
+
+
+
+  
+  <div class="media">
+    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/underwater-photography-of-woman-2404365.jpg" alt="Swimming Lessons">
+    <div class="media-body">
+      <h5 class="mt-0">450</h5>
+      I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer.
+    </div>
+  </div>
+
+  <div class="media">
+    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/white-horse-standing-on-green-grass-field-850424.jpg" alt="Nice Horse">
+    <div class="media-body">
+      <h5 class="mt-0">2500</h5>
+      She is my pride and joy. With soft eyes that you could stare into forever, falling, but at the same time so still, they reflected promise. A heart made of love, slender profile, and a gorgeous chestnut coat, Juliette was always there for me in the darkest days, when it felt like my life was a hurricane in an endless sea. I will never forget the days I spent with her, cantering in a field full of daisies, under a clear blue sky.
+    </div>
+  </div>
+
+  <div class="media">
+    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg" alt="Fashion Sense">
+    <div class="media-body">
+      <h5 class="mt-0">1172</h5>
+      She gazed into my soul; her eyes of liquid amber scrutinising things inside of which I could only dream of seeing in myself. She was a mystery. A dangerously beautiful mystery, and I was ensnared in the trap which she'd set.
+    </div>
+  </div>
+
+  <div class="media">
+    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/person-holding-ball-night-lamp-while-sitting-3043798.jpg" alt="Beginner's Orb">
+    <div class="media-body">
+      <h5 class="mt-0">47.0</h5>
+      Entry level orb. Fun at parties and other places where orbs can be found. 
+    </div>
+  </div>
+
+  <div class="media">
+    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/photo-1581328493669-71ac1ccfbbe6.jpeg" alt="Bitter Solitude">
+    <div class="media-body">
+      <h5 class="mt-0">175</h5>
+      Find yourself complaining a lot? Why not go and do it somewhere far away. Like, really far away so we don't have to hear you bitch. 
+    </div>
+  </div>
+
+
+
   
       <h2 class="border-bottom-2"><a class="text-body" href="/products/swimming-lessons/">Swimming Lessons - <strong>$ 450</strong></a></h2>
 

@@ -14,11 +14,20 @@
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="http://localhost:4000/css/main.css">
-<link rel="stylesheet" href="http://localhost:4000/css/okko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/css/ekko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/css/animate.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
 <style>
-
+h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
+body {font-family: 'Lora', serif;}
+.sans {font-family: 'Open Sans', sans-serif;}
+.serif {font-family: 'Lora', serif;}
 </style>
+
+
 
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
@@ -41,8 +50,10 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+  <div class="border-bottom">
+
+<div class="container pt-4 pb-4">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="http://localhost:4000">JEKYLL-FORESTRY-SNIPCART</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -60,6 +71,17 @@
           <a class="nav-link" href="http://localhost:4000/news/">News</a>
         </li>
       </ul>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Examples
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="http://localhost:4000/landing/">Landing</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
       <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
         Cart <ion-icon name="cart"></ion-icon>
       </a>
@@ -67,75 +89,90 @@
   </nav>
 </div>
 
+</div>
+
 
   <div class="container">
 
   <!-- post list -->
   
-  <li><a href="/layout/uncategorized/2012/03/15/layout-header-overlay-color.html"><h3>Layout: Header Overlay with Background Fill</h3></a></li>
+  <li><a href="/layout/uncategorized/2012/03/14/layout-excerpt-defined.html"><h3>Layout: Excerpt (Defined)</h3></a></li>
   
-  <li><a href="/layout/uncategorized/2012/03/15/layout-header-image-vertical.html"><h3>Layout: Header Image (Vertical)</h3></a></li>
+  <li><a href="/layout/uncategorized/2012/03/14/layout-code-excerpt-generated.html"><h3>Layout: Code Excerpt (Generated)</h3></a></li>
   
-  <li><a href="/2012/03/15/layout-header-image-text-readability.html"><h3>Layout: Header Image and Text Readability</h3></a></li>
+  <li><a href="/layout/uncategorized/2012/01/03/layout-read-time-comments-sharing-related-posts-disabled.html"><h3>Layout: Reading Time, Comments, Social Sharing Links, and Related Posts Disabled</h3></a></li>
   
-  <li><a href="/layout/uncategorized/2012/03/15/layout-header-image-horizontal.html"><h3>Layout: Header Image (Horizontal)</h3></a></li>
+  <li><a href="/layout/uncategorized/2012/01/02/layout-sharing.html"><h3>Layout: Social Sharing Links Enabled</h3></a></li>
   
-  <li><a href="/layout/uncategorized/2012/03/15/layout-header-image-external.html"><h3>Layout: Header Image (External URL)</h3></a></li>
+  <li><a href="/layout/uncategorized/2012/01/02/layout-sharing-disabled.html"><h3>Layout: Social Sharing Links Disabled</h3></a></li>
   
-  <li><a href="/2012/03/15/layout-author-sidebar-disabled.html"><h3>Layout: Author Sidebar Disabled</h3></a></li>
+  <li><a href="/layout/uncategorized/2012/01/02/layout-related-posts.html"><h3>Layout: Related Posts Enabled</h3></a></li>
+  
+  <li><a href="/layout/uncategorized/2012/01/02/layout-related-posts-disabled.html"><h3>Layout: Related Posts Disabled</h3></a></li>
+  
+  <li><a href="/2012/01/02/layout-read-time.html"><h3>Layout: Read Time Enabled</h3></a></li>
+  
+  <li><a href="/2012/01/02/layout-read-time-disabled.html"><h3>Layout: Read Time Disabled</h3></a></li>
+  
+  <li><a href="/layout/uncategorized/2012/01/02/layout-comments.html"><h3>Layout: Comments Enabled</h3></a></li>
   
 
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+
+
+  <nav aria-label="Page navigation example">
 
   <!-- pagination -->
   
-  <div class="pagination">
-    
-      <a href="/news/page2/">&laquo; Prev</a>
-    
+  <ul class="pagination">
+    <li class="page-item">
+      
+        <a class="page-link" href="/news/page2/">&laquo; Prev</a>
+      
+    </li>
 
-    
-      
-        <a href="/">1</a>
-      
-    
-      
-        <a href="/news/page2/">2</a>
-      
-    
-      
+      <li class="page-item">
+        
+        
+        <a  class="page-link" href="/">1</a>
+        
+        
+        
+        <a  class="page-link" href="/news/page2/">2</a>
+        
+        
+        
         <span class="webjeda">3</span>
-      
-    
-      
-        <a href="/news/page4/">4</a>
-      
-    
-      
-        <a href="/news/page5/">5</a>
-      
-    
-      
-        <a href="/news/page6/">6</a>
-      
-    
-      
-        <a href="/news/page7/">7</a>
-      
-    
-      
-        <a href="/news/page8/">8</a>
-      
-    
-      
-        <a href="/news/page9/">9</a>
-      
-    
+        
+        
+        
+        <a  class="page-link" href="/news/page4/">4</a>
+        
+        
+        
+        <a  class="page-link" href="/news/page5/">5</a>
+        
+        
+      </li>
 
-    
-      <a href="/news/page4/">Next &raquo;</a>
-    
-  </div>
+    <li class="page-item">
+      
+        <a class="page-link" href="/news/page4/">Next &raquo;</a>
+      
+    </li>
+
+  </ul>
   
+
+  </nav>
 
 </div>
 

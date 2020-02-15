@@ -14,11 +14,20 @@
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="http://localhost:4000/css/main.css">
-<link rel="stylesheet" href="http://localhost:4000/css/okko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/css/ekko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/css/animate.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
 <style>
-
+h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
+body {font-family: 'Lora', serif;}
+.sans {font-family: 'Open Sans', sans-serif;}
+.serif {font-family: 'Lora', serif;}
 </style>
+
+
 
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
@@ -41,8 +50,10 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+  <div class="border-bottom">
+
+<div class="container pt-4 pb-4">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="http://localhost:4000">JEKYLL-FORESTRY-SNIPCART</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -60,11 +71,24 @@
           <a class="nav-link" href="http://localhost:4000/news/">News</a>
         </li>
       </ul>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Examples
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="http://localhost:4000/landing/">Landing</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </li>
       <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
         Cart <ion-icon name="cart"></ion-icon>
       </a>
     </div>
   </nav>
+</div>
+
 </div>
 
 

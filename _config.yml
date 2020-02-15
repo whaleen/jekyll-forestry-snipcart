@@ -7,7 +7,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 plugins: [jekyll-paginate]
 
-paginate: 6
+paginate: 10
 paginate_path: "/news/page:num/"
 
 # See /forestry/settings.yml
