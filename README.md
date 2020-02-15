@@ -1,7 +1,7 @@
 
-### CSS
+Don't use this... yet.
 
-Using Bulma. Not overly styled. Strip classes and add a different Framework if you want.
+
 
 ### Developing in the Browser
 
