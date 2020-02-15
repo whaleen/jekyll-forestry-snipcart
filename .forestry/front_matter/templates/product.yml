@@ -2,6 +2,59 @@
 label: Product
 hide_body: false
 fields:
+- name: product_type
+  type: select
+  default: Single
+  config:
+    required: false
+    options:
+    - Single
+    - T-Shirt
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Product Type
+- name: t-shirt_small_stock_count
+  type: number
+  label: T-Shirt Small Stock Count
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  showOnly:
+    field: product_type
+    value: T-Shirt
+- name: t-shirt_medium_stock_count
+  type: number
+  label: T-Shirt Medium Stock Count
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  showOnly:
+    field: product_type
+    value: T-Shirt
+- name: t-shirt_large_stock_count
+  type: number
+  label: T-Shirt Large Stock Count
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  showOnly:
+    field: product_type
+    value: T-Shirt
 - name: size
   type: select
   default: []
@@ -17,10 +70,16 @@ fields:
       file: 
       path: 
   label: Size
+  showOnly:
+    field: product_type
+    value: Single
 - name: in_stock
   type: boolean
   label: In Stock
   default: false
+  showOnly:
+    field: product_type
+    value: Single
 - name: stock_count
   type: number
   label: Stock Count
