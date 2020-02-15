@@ -2,15 +2,6 @@
 label: Product
 hide_body: false
 fields:
-- name: date
-  type: datetime
-  label: Date
-  description: ''
-  config:
-    required: false
-    date_format: 
-    time_format: 
-    display_utc: false
 - name: in_stock
   type: boolean
   label: In Stock
@@ -69,6 +60,15 @@ fields:
   hidden: true
   label: Layout
   default: product
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 pages:
 - _products/beginner-s-orb.md
 - _products/bitter-solitude.md
