@@ -16,10 +16,6 @@ fields:
   config:
     required: false
   label: Title
-- name: categories
-  type: tag_list
-  default: []
-  label: Categories
 - name: description
   type: textarea
   default: ''
@@ -32,16 +28,6 @@ fields:
 - name: price
   type: number
   label: Price
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-- name: sale_price
-  type: number
-  label: Sale Price
   description: ''
   default: 0
   required: true
@@ -65,6 +51,9 @@ fields:
   hidden: true
   label: Layout
   default: product
+- name: in_stock
+  type: boolean
+  label: In Stock
 pages:
 - _products/beginner-s-orb.md
 - _products/bitter-solitude.md
