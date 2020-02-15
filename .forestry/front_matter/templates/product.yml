@@ -69,6 +69,11 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: sale_price
+  type: text
+  config:
+    required: false
+  label: Sale Price
 pages:
 - _products/beginner-s-orb.md
 - _products/bitter-solitude.md
