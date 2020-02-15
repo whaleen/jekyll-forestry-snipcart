@@ -92,8 +92,8 @@ fields:
     step: 
     required: true
   showOnly:
-    field: in_stock
-    value: true
+    field: product_type
+    value: Single
 - name: title
   type: text
   config:
