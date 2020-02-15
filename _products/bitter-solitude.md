@@ -1,6 +1,6 @@
 ---
 layout: product
-date: 2020-02-04 08:00:00 +0000
+date: 2020-02-04T08:00:00.000+00:00
 title: Bitter Solitude
 description: 'Find yourself complaining a lot? Why not go and do it somewhere far
   away. Like, really far away so we don''t have to hear you bitch. '
@@ -10,5 +10,6 @@ images: []
 categories:
 - camping
 sale_price: 
+in_stock: true
 
 ---
