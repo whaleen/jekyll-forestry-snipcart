@@ -11,14 +11,14 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: in_stock
+  type: boolean
+  label: In Stock
 - name: title
   type: text
   config:
     required: false
   label: Title
-- name: in_stock
-  type: boolean
-  label: In Stock
 - name: categories
   type: tag_list
   default: []
