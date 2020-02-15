@@ -13,10 +13,15 @@ images:
 layout: product
 featured_image: "/uploads/white-horse-standing-on-green-grass-field-850424.jpg"
 date: 2020-01-02T08:00:00.000+00:00
-sale_price: 1700
+sale_price: "1700"
 categories:
 - animals
-in_stock: false
+in_stock: true
 stock_count: 5000
+product_type: Single
+t-shirt_small_stock_count: 
+t-shirt_medium_stock_count: 
+t-shirt_large_stock_count: 
+size: ''
 
 ---
