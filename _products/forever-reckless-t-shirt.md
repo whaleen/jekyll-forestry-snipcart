@@ -23,7 +23,7 @@ sale_price: "18"
 size: ''
 product_type: T-Shirt
 t-shirt_small_stock_count: 100
-t-shirt_medium_stock_count: 100
+t-shirt_medium_stock_count: 0
 t-shirt_large_stock_count: 100
 
 ---
