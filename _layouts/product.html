@@ -7,10 +7,7 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
-
-  {% include nav.html %}
-
+{% include nav.html %}
 
 <div class="container p-4">
 
@@ -19,25 +16,49 @@
     <div class="col-6">
       <h1 class="display-1">{{ page.title }}</h1>
       <button class="btn ">{{ page.categories }}</button><br />
-      <p class="sans p-2">
-          {% if page.sale_price %}
 
+
+      <!-- Show sale price or regular price
+      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+      -->
+      <p class="sans p-2">
+        {% if page.sale_price %}
         <strike><strong class="animated ">$ {{ page.price }}</strong></strike>  <strong class="animated fadeIn delay-3s">$ {{ page.sale_price }}</strong>
         {% else %}
         <strong>$ {{ page.price }}</strong>
         {% endif %}
       </p>
+
+
+
       <p>{{ page.description }}</p>
 
+
+      <!-- Add to Cart button
+      - Snipcart integrating with .snipcart-add-item
+      - Can be disabled by a false value in frontmatter 'in_stock: false'
+      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+      -->
       <button class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
         data-item-id="{{ page.title | slugify }}"
         data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
         data-item-url="{{ page.url }}"
         data-item-description="{{ page.description }}"
         data-item-image="{{ page.featured_image}}"
-        data-item-name="{{ page.title }}">
-        Add to Cart
+        data-item-name="{{ page.title }}"
+        {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
+        {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
       </button>
+      <!-- /Add to Cart button -->
+
+
+      <!-- Stock count  -->
+      <p>
+        {% if page.stock_count == 0 %}
+        there are none left :(
+        {% endif %}
+      </p>
+      <!-- /Stock count  -->
 
       <div class="row">
         <div class="col-6">
