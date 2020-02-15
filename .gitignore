@@ -3,4 +3,10 @@
 .jekyll-cache
 .jekyll-metadata
 vendor
-pixelmator
+
+# Presently using some Bootstrap items from here but need to decide better how to manage any assets in node modules...
+node_modules
+
+
+# Airtable API key, etc...
+.env
