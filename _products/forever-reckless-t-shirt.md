@@ -20,5 +20,10 @@ images:
 - "/uploads/photo-1568640572264-77438f8cab5c.jpeg"
 - "/uploads/photo-1568640398393-5714900f35b5.jpeg"
 sale_price: "18"
+size: ''
+product_type: T-Shirt
+t-shirt_small_stock_count: 100
+t-shirt_medium_stock_count: 100
+t-shirt_large_stock_count: 100
 
 ---

@@ -9,7 +9,13 @@ featured_image: "/uploads/photo-1581328493669-71ac1ccfbbe6.jpeg"
 images: []
 categories:
 - camping
-sale_price: 
+sale_price: ''
 in_stock: true
+product_type: Single
+t-shirt_small_stock_count: 
+t-shirt_medium_stock_count: 
+t-shirt_large_stock_count: 
+size: ''
+stock_count: 100
 
 ---
