@@ -11,6 +11,9 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: in_stock
+  type: boolean
+  label: In Stock
 - name: title
   type: text
   config:
@@ -51,9 +54,6 @@ fields:
   hidden: true
   label: Layout
   default: product
-- name: in_stock
-  type: boolean
-  label: In Stock
 pages:
 - _products/beginner-s-orb.md
 - _products/bitter-solitude.md
