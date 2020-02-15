@@ -13,5 +13,6 @@ date: 2020-01-03T08:00:00.000+00:00
 categories:
 - fashion
 sale_price: 
+in_stock: true
 
 ---
