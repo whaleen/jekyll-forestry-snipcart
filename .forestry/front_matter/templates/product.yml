@@ -2,6 +2,21 @@
 label: Product
 hide_body: false
 fields:
+- name: size
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Small
+    - Medium
+    - Large
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Size
 - name: in_stock
   type: boolean
   label: In Stock
@@ -74,21 +89,6 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
-- name: size
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - Small
-    - Medium
-    - Large
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Size
 pages:
 - _products/beginner-s-orb.md
 - _products/bitter-solitude.md
