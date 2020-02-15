@@ -17,5 +17,7 @@ sale_price: 1700
 categories:
 - animals
 in_stock: false
+# Airtable
+stock_count: 0
 
 ---
