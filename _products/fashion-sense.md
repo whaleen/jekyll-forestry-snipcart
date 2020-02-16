@@ -13,7 +13,7 @@ date: 2020-01-03T08:00:00.000+00:00
 categories:
 - parties
 - fashion
-sale_price: ''
+sale_price: "0"
 in_stock: true
 product_type: Single
 t-shirt_small_stock_count: 
