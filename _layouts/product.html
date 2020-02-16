@@ -23,23 +23,72 @@
       -->
       <p class="sans p-2">
         {% if page.sale_price %}
-        <strike><strong class="animated ">$ {{ page.price }}</strong></strike>  <strong class="animated fadeIn delay-3s">$ {{ page.sale_price }}</strong>
+        <strike><strong class="animated headShake">$ {{ page.price }}</strong></strike>  <strong class="animated fadeIn">$ {{ page.sale_price }}</strong>
         {% else %}
         <strong>$ {{ page.price }}</strong>
         {% endif %}
       </p>
 
 
-
       <p>{{ page.description }}</p>
 
 
-      <!-- Add to Cart button
+
+        {% if page.product_type == 'T-Shirt' %}
+          <select id="my-size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          </select>
+        {% endif %}
+
+
+        <!--  Digital Download Button -->
+        {% if page.product_type == 'Digital Download' %}
+        <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
+          data-item-id="{{ page.title | slugify }}"
+          data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
+          data-item-url="{{ page.url }}"
+          data-item-description="{{ page.description }}"
+          data-item-image="{{ page.featured_image}}"
+          data-item-name="{{ page.title }}"
+          data-item-file-guid="{{ page.guid }}"
+          {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
+          {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
+        </button>
+        {% endif %}
+
+
+
+      <!-- T-Shirt Add to Cart button
       - Snipcart integrating with .snipcart-add-item
       - Can be disabled by a false value in frontmatter 'in_stock: false'
       - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
       -->
-      <button class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
+      {% if page.product_type == 'T-Shirt' %}
+      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
+        data-item-id="{{ page.title | slugify }}"
+        data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
+        data-item-url="{{ page.url }}"
+        data-item-description="{{ page.description }}"
+        data-item-image="{{ page.featured_image}}"
+        data-item-name="{{ page.title }}"
+        data-item-custom2-name="Size"
+        data-item-custom2-options="Small|Medium|Large[+2]"
+        {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
+        {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
+      </button>
+      {% endif %}
+      <!-- /T-Shirt Add to Cart button -->
+
+
+      <!-- Single Add to Cart button
+      - Snipcart integrating with .snipcart-add-item
+      - Can be disabled by a false value in frontmatter 'in_stock: false'
+      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+      -->
+      {% if page.product_type == 'Single' %}
+      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
         data-item-id="{{ page.title | slugify }}"
         data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
         data-item-url="{{ page.url }}"
@@ -49,16 +98,46 @@
         {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
         {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
       </button>
-      <!-- /Add to Cart button -->
-
+      {% endif %}
+      <!-- /T-Shirt Add to Cart button -->
 
       <!-- Stock count  -->
       <p>
         {% if page.stock_count == 0 %}
         there are none left :(
+        {% else %}
+        In stock
         {% endif %}
+        <hr />
+
+
+        {% if page.product_type == 'T-Shirt' %}
+          <!-- Inventory per size  -->
+          <!-- Small count -->
+          {% if page.t-shirt_small_stock_count == 0 %}
+          No Small size left :(
+          {% else %}
+          There are {{ page.t-shirt_small_stock_count }} in Small left
+          {% endif %}
+          <hr />
+          <!-- Medium count -->
+          {% if page.t-shirt_medium_stock_count == 0 %}
+          No Medium size left :(
+          {% else %}
+          There are {{ page.t-shirt_medium_stock_count }} in Medium left
+          {% endif %}
+          <hr />
+          <!-- Large count -->
+          {% if page.t-shirt_large_stock_count == 0 %}
+          No Large size left :(
+          {% else %}
+          There are {{ page.t-shirt_large_stock_count }} in Large left
+          {% endif %}
+        {% endif %}
+
       </p>
       <!-- /Stock count  -->
+
 
       <div class="row">
         <div class="col-6">
@@ -100,19 +179,6 @@
   <p>
     You might also like:
   </p>
-
-
-
-  {% for product in site.products %}
-  <div class="media">
-    <img class="mr-3 w-25 rounded" src="{{ site.url }}/{{ product.featured_image }}" alt="{{ product.title }}">
-    <div class="media-body">
-      <h5 class="mt-0">{{ product.price }}</h5>
-      {{ product.description }}
-    </div>
-  </div>
-{% endfor %}
-
 
   {% for product in site.products %}
       <h2 class="border-bottom-2"><a class="text-body" href="{{ product.url }}">{{ product.title }} - <strong>$ {{ product.price }}</strong></a></h2>
