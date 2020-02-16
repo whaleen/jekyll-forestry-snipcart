@@ -3,6 +3,87 @@ layout: default
 permalink: /products/
 ---
 
+
+
+<div class="container pt-5">
+  <div class="row">
+    <div class="card-columns card-columns-a">
+        {% for product in site.products %}
+          <div class="card">
+             <img class="card-img" src="{{ product.featured_image }}" alt="{{ product.title }}">
+            <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+              <h3 class="card-title">{{ product.title }}</h3>
+              <h6 class="card-subtitle mb-2">$ {{ product.price }}.00</h6>
+              <p class="card-text">{{ product.description | truncate: "40" }}</p>
+              <div class="link d-flex">
+                <a href="{{ site.url }}{{ product.url }}" class="card-link">View More</a>
+                <a href="#" class="card-link text-warning">{{ product.categories | capitalize }}</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
+<hr class="pt-5 pb-5" />
+
+<div class="bg-light">
+
+<div class="container">
+  <h1>Event</h1>
+  <div class="card-columns">
+    {% for event in site.event-tiers %}
+      <div class="card rounded-0 border-0 p-2">
+        <h1><a class="text-body" href="{{ product.url }}">{{ event.title }}</a></h1>
+        {{ event.description }} <br>
+
+        {% if event.sale_price %}
+        <strike><strong>$ {{ event.price }}</strong></strike>  <strong>$ {{ event.sale_price }}</strong>
+        {% else %}
+        <strong>$ {{ event.price }}</strong>
+        {% endif %}
+
+        <img class="img-fluid" src="{{ event.featured_image }}">
+        <a href="#" class="btn btn-primary border-0 rounded-0 bg-dark">Add To Cart</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+
+<hr class="pt-5 pb-5" />
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="card-columns">
+        {% for product in site.products %}
+          <div class="card">
+             <img class="card-img" src="{{ product.featured_image }}" alt="{{ product.title }}">
+            <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+              <h3 class="card-title">{{ product.title }}</h3>
+              <h6 class="card-subtitle mb-2">$ {{ product.price }}.00</h6>
+              <p class="card-text">{{ product.description | truncate: "60" }}</p>
+              <div class="link d-flex">
+                <a href="{{ site.url }}{{ product.url }}" class="card-link">View More</a>
+                <a href="#" class="card-link text-warning">Book a Trip</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+
+<hr class="pt-5 pb-5" />
+
 <div class="container">
 
   <div class="card-columns">
@@ -12,16 +93,11 @@ permalink: /products/
         <h1><a class="text-body" href="{{ product.url }}">{{ product.title }}</a></h1>
         {{ product.description }} <br>
 
-
         {% if product.sale_price %}
         <strike><strong>$ {{ product.price }}</strong></strike>  <strong>$ {{ product.sale_price }}</strong>
         {% else %}
         <strong>$ {{ product.price }}</strong>
         {% endif %}
-
-
-
-
 
         <img class="img-fluid" src="{{ product.featured_image }}">
         <a href="#" class="btn btn-primary border-0 rounded-0 bg-dark">Add To Cart</a>
