@@ -19,7 +19,7 @@ featured_image: "/uploads/photo-1568641470259-3a3253bf8739.jpeg"
 images:
 - "/uploads/photo-1568640572264-77438f8cab5c.jpeg"
 - "/uploads/photo-1568640398393-5714900f35b5.jpeg"
-sale_price: "18"
+sale_price: 
 size: ''
 product_type: T-Shirt
 t-shirt_small_stock_count: 100
