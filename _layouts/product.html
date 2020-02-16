@@ -9,18 +9,75 @@
 
 {% include nav.html %}
 
+
+
+<div class="container">
+  <div class="row">
+
+
+{% for product in site.products %}
+    <div class="col-1">
+      <img class="img-fluid" src="{{ product.featured_image }}" />
+    </div>
+{% endfor %}
+  </div>
+</div>
+
+
 <div class="container p-4">
+
+
+  <div class="post-nav">
+    <div>
+      {% if page.previous.url %}
+      <a href="{{page.previous.url}}">&laquo;&nbsp;{{page.previous.title}} {{page.previous.featured_image}}</a>
+      {% endif %}
+    </div>
+    <div class="post-nav-next">
+      {% if page.next.url %}
+      <a href="{{page.next.url}}">{{page.next.title}}&nbsp;&raquo;</a>
+      {% endif %}
+    </div>
+  </div>
+
+
+
+
 
   <div class="row">
 
     <div class="col-6">
       <h1 class="display-1">{{ page.title }}</h1>
-      <button class="btn ">{{ page.categories }}</button><br />
+
+
+<!-- {{ page.categories }} -->
+
+{% capture first_category %}<!-- -->
+  {% for item in page.categories limit: 1 %}
+    {{ item }}
+  {% endfor %}
+{% endcapture %}
+<!--
+{% for product in site.products %}
+  {{ product.title }}
+{% endfor %} -->
+
+
+{{ first_category }}{{ first_category }}
+<ul>
+{% for product in site.products %}
+  {% if product.categories contains {{ first_category }} %}
+
+    <li>{{ product.title }}</li>
+  {% endif %}
+{% endfor %}
+</ul>
 
 
       <!-- Show sale price or regular price
       - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
       -->
+
       <p class="sans p-2">
         {% if page.sale_price %}
         <strike><strong class="animated headShake">$ {{ page.price }}</strong></strike>  <strong class="animated fadeIn">$ {{ page.sale_price }}</strong>
