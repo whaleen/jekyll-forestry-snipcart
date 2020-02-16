@@ -3,10 +3,35 @@ layout: default
 ---
 
 
-<div class="bg-light">
-  <img class="img-fluid" src="{{site.url}}/img/vendors.png">
+
+<div class="container p-4">
+  <div class="row">
+        {% for product in site.products %}
+        <div class="col-lg-3 col-md-6 mb-4">
+          <a class="product_thumb" href="{{ product.url }}">
+          <img class="img-fluid rounded" src="{{ product.featured_image }}">
+          </a>
+        </div>
+        {% endfor %}
+  </div>
 </div>
 
+<div class="bg-light">
+<div class="container p-4 mt-5">
+  <h1>Hello World</h1>
+  <p>
+    Pommy ipsum roast beef it's me peepers Weeping Angels I'd reet fancy a pigeons in Trafalgar Square gob, her Majesty's pleasure the chippy punter a right toff chav lost her marbles, punter twiglets it's just not cricket it's nicked I'd reet fancy a fish and chips. Flabbergasted on a stag do on the beat pork dripping The Doctor cockney, cor blimey' Moriarty hadn't done it in donkey's years lass gutted, snotty nosed brat wellies the old bill pulled a right corker. Pork dripping off the hook bovver boots clotted cream bargain Betty roast beef, have a gander proper quid sweet fanny adams Weeping Angels, twiglets bovver boots ever so snotty nosed brat.
+  </p>
+</div>
+</div>
+
+<div class="bg-light pt-5 pb-5 mt-5 mb-5">
+  <div class="container">
+    <img class="img-fluid" src="{{site.url}}/img/vendors.png">
+  </div>
+</div>
+
+<div class="container">
 
 {% for collection in site.collections %}
   <h2>Items from {{ collection.label }}</h2>
@@ -16,3 +41,5 @@ layout: default
     {% endfor %}
   </ul>
 {% endfor %}
+
+</div>
