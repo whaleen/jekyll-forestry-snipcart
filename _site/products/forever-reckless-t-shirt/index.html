@@ -92,8 +92,8 @@ body {font-family: 'Lora', serif;}
   <div class="row">
 
     <div class="col-6">
-      <h1 class="display-1">Fashion Sense</h1>
-      <button class="btn ">fashion</button><br />
+      <h1 class="display-1">Forever Reckless T-Shirt</h1>
+      <button class="btn "></button><br />
 
 
       <!-- Show sale price or regular price
@@ -101,15 +101,21 @@ body {font-family: 'Lora', serif;}
       -->
       <p class="sans p-2">
         
-        <strike><strong class="animated headShake">$ 1172</strong></strike>  <strong class="animated fadeIn">$ </strong>
+        <strike><strong class="animated headShake">$ 27</strong></strike>  <strong class="animated fadeIn">$ 18</strong>
         
       </p>
 
 
-      <p>She gazed into my soul; her eyes of liquid amber scrutinising things inside of which I could only dream of seeing in myself. She was a mystery. A dangerously beautiful mystery, and I was ensnared in the trap which she'd set.</p>
+      <p>Pommy ipsum grab a jumper a cuppa oopsy-daisies, fish and chips Queen Elizabeth squiffy doing my head in, tally-ho The Hounds of Baskerville and we all like figgy pudding. Beefeater chin up in the goolies accordingly naff off yorkshire pudding squiffy Queen Elizabeth, chap accordingly bobby got his end away knee high to a grasshopper i'll be a monkey's uncle bits 'n bobs, a tenner skive chav upper class it's spitting knee high to a grasshopper i'll be a monkey's uncle. Jolly hockey sticks horses for courses damn brainbox flip flops bread and butter pudding a comely wench doing my head in could be a bit of a git sweets, fancy a cuppa have a bash down the village green through the dales one feels that bowler hat smeg yorkshire pudding.</p>
 
 
 
+        
+          <select id="my-size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          </select>
         
 
 
@@ -124,6 +130,19 @@ body {font-family: 'Lora', serif;}
       - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
       -->
       
+      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
+        data-item-id="forever-reckless-t-shirt"
+        data-item-price="18"
+        data-item-url="/products/forever-reckless-t-shirt/"
+        data-item-description="Pommy ipsum grab a jumper a cuppa oopsy-daisies, fish and chips Queen Elizabeth squiffy doing my head in, tally-ho The Hounds of Baskerville and we all like figgy pudding. Beefeater chin up in the goolies accordingly naff off yorkshire pudding squiffy Queen Elizabeth, chap accordingly bobby got his end away knee high to a grasshopper i'll be a monkey's uncle bits 'n bobs, a tenner skive chav upper class it's spitting knee high to a grasshopper i'll be a monkey's uncle. Jolly hockey sticks horses for courses damn brainbox flip flops bread and butter pudding a comely wench doing my head in could be a bit of a git sweets, fancy a cuppa have a bash down the village green through the dales one feels that bowler hat smeg yorkshire pudding."
+        data-item-image="/uploads/photo-1568641470259-3a3253bf8739.jpeg"
+        data-item-name="Forever Reckless T-Shirt"
+        data-item-custom2-name="Size"
+        data-item-custom2-options="Small|Medium|Large[+2]"
+        > <!-- Front matter 'in_stock' is either false/true -->
+        Add to Cart
+      </button>
+      
       <!-- /T-Shirt Add to Cart button -->
 
 
@@ -132,17 +151,6 @@ body {font-family: 'Lora', serif;}
       - Can be disabled by a false value in frontmatter 'in_stock: false'
       - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
       -->
-      
-      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
-        data-item-id="fashion-sense"
-        data-item-price=""
-        data-item-url="/products/fashion-sense/"
-        data-item-description="She gazed into my soul; her eyes of liquid amber scrutinising things inside of which I could only dream of seeing in myself. She was a mystery. A dangerously beautiful mystery, and I was ensnared in the trap which she'd set."
-        data-item-image="/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg"
-        data-item-name="Fashion Sense"
-        > <!-- Front matter 'in_stock' is either false/true -->
-        Add to Cart
-      </button>
       
       <!-- /T-Shirt Add to Cart button -->
 
@@ -154,6 +162,22 @@ body {font-family: 'Lora', serif;}
         <hr />
 
 
+        
+          <!-- Inventory per size  -->
+          <!-- Small count -->
+          
+          There are 100 in Small left
+          
+          <hr />
+          <!-- Medium count -->
+          
+          No Medium size left :(
+          
+          <hr />
+          <!-- Large count -->
+          
+          There are 100 in Large left
+          
         
 
       </p>
@@ -172,21 +196,21 @@ body {font-family: 'Lora', serif;}
     </div>
 
     <div class="col-6">
-      <a href="http://localhost:4000/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg"data-toggle="lightbox" data-gallery="fashion-sense-gallery">
-      <img class="img-fluid rounded" src="http://localhost:4000/uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg" />
+      <a href="http://localhost:4000/uploads/photo-1568641470259-3a3253bf8739.jpeg"data-toggle="lightbox" data-gallery="forever-reckless-t-shirt-gallery">
+      <img class="img-fluid rounded" src="http://localhost:4000/uploads/photo-1568641470259-3a3253bf8739.jpeg" />
       </a>
 
       <div class="row pt-4">
          <!-- Loop through the photos from YAML frontmatter -->
           <div class="col-6">
-            <a href="http://localhost:4000/uploads/photo-of-woman-wearing-black-leather-jacket-3062627.jpg" data-toggle="lightbox" data-gallery="fashion-sense-gallery">
-              <img class="img-fluid rounded" src="/uploads/photo-of-woman-wearing-black-leather-jacket-3062627.jpg" >
+            <a href="http://localhost:4000/uploads/photo-1568640572264-77438f8cab5c.jpeg" data-toggle="lightbox" data-gallery="forever-reckless-t-shirt-gallery">
+              <img class="img-fluid rounded" src="/uploads/photo-1568640572264-77438f8cab5c.jpeg" >
             </a>
           </div>
          <!-- Loop through the photos from YAML frontmatter -->
           <div class="col-6">
-            <a href="http://localhost:4000/uploads/photo-of-woman-holding-her-hair-3062601.jpg" data-toggle="lightbox" data-gallery="fashion-sense-gallery">
-              <img class="img-fluid rounded" src="/uploads/photo-of-woman-holding-her-hair-3062601.jpg" >
+            <a href="http://localhost:4000/uploads/photo-1568640398393-5714900f35b5.jpeg" data-toggle="lightbox" data-gallery="forever-reckless-t-shirt-gallery">
+              <img class="img-fluid rounded" src="/uploads/photo-1568640398393-5714900f35b5.jpeg" >
             </a>
           </div>
         

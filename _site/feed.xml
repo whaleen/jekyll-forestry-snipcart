@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-14T19:41:55-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jekyll-forestry-snipcart</title><subtitle>This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.</subtitle><entry><title type="html">The Reclusiveness of Kraftwerk</title><link href="http://localhost:4000/kruatrock/2020/01/01/the-reclusiveness-of-kraftwerk-1.html" rel="alternate" type="text/html" title="The Reclusiveness of Kraftwerk" /><published>2020-01-01T00:00:00-08:00</published><updated>2020-01-01T00:00:00-08:00</updated><id>http://localhost:4000/kruatrock/2020/01/01/the-reclusiveness-of-kraftwerk-1</id><content type="html" xml:base="http://localhost:4000/kruatrock/2020/01/01/the-reclusiveness-of-kraftwerk-1.html">&lt;p&gt;The band is notoriously reclusive, providing rare and enigmatic interviews, using life-size mannequins and robots to conduct official photo shoots, refusing to accept mail and not allowing visitors at the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kling_Klang_Studio&quot; title=&quot;Kling Klang Studio&quot;&gt;Kling Klang Studio&lt;/a&gt;, the precise location of which they used to keep secret.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-15T16:44:31-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jekyll-forestry-snipcart</title><subtitle>This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.</subtitle><entry><title type="html">The Reclusiveness of Kraftwerk</title><link href="http://localhost:4000/kruatrock/2020/01/01/the-reclusiveness-of-kraftwerk-1.html" rel="alternate" type="text/html" title="The Reclusiveness of Kraftwerk" /><published>2020-01-01T00:00:00-08:00</published><updated>2020-01-01T00:00:00-08:00</updated><id>http://localhost:4000/kruatrock/2020/01/01/the-reclusiveness-of-kraftwerk-1</id><content type="html" xml:base="http://localhost:4000/kruatrock/2020/01/01/the-reclusiveness-of-kraftwerk-1.html">&lt;p&gt;The band is notoriously reclusive, providing rare and enigmatic interviews, using life-size mannequins and robots to conduct official photo shoots, refusing to accept mail and not allowing visitors at the &lt;a href=&quot;https://en.wikipedia.org/wiki/Kling_Klang_Studio&quot; title=&quot;Kling Klang Studio&quot;&gt;Kling Klang Studio&lt;/a&gt;, the precise location of which they used to keep secret.&lt;/p&gt;
 
 &lt;p&gt;Another notable example of this eccentric behaviour was reported to &lt;a href=&quot;https://en.wikipedia.org/wiki/Johnny_Marr&quot; title=&quot;Johnny Marr&quot;&gt;Johnny Marr&lt;/a&gt; of &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Smiths&quot; title=&quot;The Smiths&quot;&gt;the Smiths&lt;/a&gt; by Karl Bartos, who explained that anyone trying to contact the band for collaboration would be told the studio telephone did not have a ringer since while recording, the band did not like to hear any kind of noise pollution. Instead, callers were instructed to phone the studio precisely at a certain time, whereupon the phone would be answered by Ralf Hütter, despite never hearing the phone ring.&lt;/p&gt;
 
@@ -9,7 +9,7 @@
 
 &lt;h3 id=&quot;gfm-code-blocks&quot;&gt;GFM Code Blocks&lt;/h3&gt;
 
-&lt;p&gt;GitHub Flavored Markdown &lt;a href=&quot;https://help.github.com/articles/creating-and-highlighting-code-blocks/&quot;&gt;fenced code blocks&lt;/a&gt; are supported. To modify styling and highlight colors edit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/_sass/syntax.scss&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;GitHub Flavored Markdown &lt;a href=&quot;https://help.github.com/articles/creating-and-highlighting-code-blocks/&quot;&gt;fenced code blocks&lt;/a&gt; are supported. To modify styling and highlight colors edit &lt;code class=&quot;highlighter-rouge&quot;&gt;/_sass/syntax.scss&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -49,7 +49,7 @@
 
 &lt;h3 id=&quot;code-blocks-in-lists&quot;&gt;Code Blocks in Lists&lt;/h3&gt;
 
-&lt;p&gt;Indentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.&lt;/code&gt;). Usually this will mean indenting 3 spaces instead of 4.&lt;/p&gt;
+&lt;p&gt;Indentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;1.&lt;/code&gt;). Usually this will mean indenting 3 spaces instead of 4.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Do step 1.&lt;/li&gt;
@@ -78,7 +78,7 @@
       &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Syntax_highlighting&quot;&gt;http://en.wikipedia.org/wiki/Syntax_highlighting&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="code" /><category term="syntax highlighting" /><summary type="html">Post displaying the various ways of highlighting code in Markdown.</summary></entry><entry><title type="html">Markup: Another Post with Images</title><link href="http://localhost:4000/2013/05/22/markup-more-images.html" rel="alternate" type="text/html" title="Markup: Another Post with Images" /><published>2013-05-22T00:00:00-07:00</published><updated>2013-05-22T00:00:00-07:00</updated><id>http://localhost:4000/2013/05/22/markup-more-images</id><content type="html" xml:base="http://localhost:4000/2013/05/22/markup-more-images.html">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="code" /><category term="syntax highlighting" /><summary type="html">Post displaying the various ways of highlighting code in Markdown.</summary></entry><entry><title type="html">Markup: Another Post with Images</title><link href="http://localhost:4000/2013/05/22/markup-more-images.html" rel="alternate" type="text/html" title="Markup: Another Post with Images" /><published>2013-05-22T00:00:00-07:00</published><updated>2013-05-22T00:00:00-07:00</updated><id>http://localhost:4000/2013/05/22/markup-more-images</id><content type="html" xml:base="http://localhost:4000/2013/05/22/markup-more-images.html">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
 
 &lt;h3 id=&quot;figures-for-images-or-video&quot;&gt;Figures (for images or video)&lt;/h3&gt;
 
@@ -93,7 +93,7 @@
 
 &lt;h4 id=&quot;two-up&quot;&gt;Two Up&lt;/h4&gt;
 
-&lt;p&gt;Apply the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;half&lt;/code&gt; class like so to display two images side by side that share the same caption.&lt;/p&gt;
+&lt;p&gt;Apply the &lt;code class=&quot;highlighter-rouge&quot;&gt;half&lt;/code&gt; class like so to display two images side by side that share the same caption.&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;half&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1-large.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
@@ -112,7 +112,7 @@
 
 &lt;h4 id=&quot;three-up&quot;&gt;Three Up&lt;/h4&gt;
 
-&lt;p&gt;Apply the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;third&lt;/code&gt; class like so to display three images side by side that share the same caption.&lt;/p&gt;
+&lt;p&gt;Apply the &lt;code class=&quot;highlighter-rouge&quot;&gt;third&lt;/code&gt; class like so to display three images side by side that share the same caption.&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;third&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -295,7 +295,7 @@
 
 &lt;h2 id=&quot;buttons&quot;&gt;Buttons&lt;/h2&gt;
 
-&lt;p&gt;Make any link standout more when applying the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.btn&lt;/code&gt; class.&lt;/p&gt;
+&lt;p&gt;Make any link standout more when applying the &lt;code class=&quot;highlighter-rouge&quot;&gt;.btn&lt;/code&gt; class.&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn--success&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Success Button&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -330,7 +330,7 @@
 
 &lt;h2 id=&quot;notices&quot;&gt;Notices&lt;/h2&gt;
 
-&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Watch out!&lt;/strong&gt; You can also add notices by appending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{: .notice}&lt;/code&gt; to a paragraph.&lt;/p&gt;
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Watch out!&lt;/strong&gt; You can also add notices by appending &lt;code class=&quot;highlighter-rouge&quot;&gt;{: .notice}&lt;/code&gt; to a paragraph.&lt;/p&gt;
 
 &lt;h2 id=&quot;html-tags&quot;&gt;HTML Tags&lt;/h2&gt;
 
@@ -354,7 +354,7 @@
 
 &lt;h3 id=&quot;code-tag&quot;&gt;Code Tag&lt;/h3&gt;
 
-&lt;p&gt;You will learn later on in these tests that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;word-wrap: break-word;&lt;/code&gt; will be your best friend.&lt;/p&gt;
+&lt;p&gt;You will learn later on in these tests that &lt;code class=&quot;highlighter-rouge&quot;&gt;word-wrap: break-word;&lt;/code&gt; will be your best friend.&lt;/p&gt;
 
 &lt;h3 id=&quot;strike-tag&quot;&gt;Strike Tag&lt;/h3&gt;
 
@@ -370,7 +370,7 @@
 
 &lt;h3 id=&quot;keyboard-tag&quot;&gt;Keyboard Tag&lt;/h3&gt;
 
-&lt;p&gt;This scarcely known tag emulates &lt;kbd&gt;keyboard text&lt;/kbd&gt;, which is usually styled like the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;p&gt;This scarcely known tag emulates &lt;kbd&gt;keyboard text&lt;/kbd&gt;, which is usually styled like the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
 
 &lt;h3 id=&quot;preformatted-tag&quot;&gt;Preformatted Tag&lt;/h3&gt;
 

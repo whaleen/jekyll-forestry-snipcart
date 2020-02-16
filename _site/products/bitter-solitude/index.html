@@ -45,9 +45,7 @@ body {font-family: 'Lora', serif;}
 
 <body>
 
-  <!-- Add your site or application content here -->
-
-  <div class="border-bottom">
+<div class="border-bottom">
 
 <div class="container pt-4 pb-4">
   <nav class="navbar navbar-expand-lg navbar-light">
@@ -89,7 +87,6 @@ body {font-family: 'Lora', serif;}
 </div>
 
 
-
 <div class="container p-4">
 
   <div class="row">
@@ -97,22 +94,71 @@ body {font-family: 'Lora', serif;}
     <div class="col-6">
       <h1 class="display-1">Bitter Solitude</h1>
       <button class="btn ">camping</button><br />
+
+
+      <!-- Show sale price or regular price
+      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+      -->
       <p class="sans p-2">
-          
-        <strong>$ 175</strong>
+        
+        <strike><strong class="animated headShake">$ 175</strong></strike>  <strong class="animated fadeIn">$ </strong>
         
       </p>
+
+
       <p>Find yourself complaining a lot? Why not go and do it somewhere far away. Like, really far away so we don't have to hear you bitch. </p>
 
-      <button class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
+
+
+        
+
+
+        <!--  Digital Download Button -->
+        
+
+
+
+      <!-- T-Shirt Add to Cart button
+      - Snipcart integrating with .snipcart-add-item
+      - Can be disabled by a false value in frontmatter 'in_stock: false'
+      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+      -->
+      
+      <!-- /T-Shirt Add to Cart button -->
+
+
+      <!-- Single Add to Cart button
+      - Snipcart integrating with .snipcart-add-item
+      - Can be disabled by a false value in frontmatter 'in_stock: false'
+      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+      -->
+      
+      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
         data-item-id="bitter-solitude"
-        data-item-price="175"
+        data-item-price=""
         data-item-url="/products/bitter-solitude/"
         data-item-description="Find yourself complaining a lot? Why not go and do it somewhere far away. Like, really far away so we don't have to hear you bitch. "
         data-item-image="/uploads/photo-1581328493669-71ac1ccfbbe6.jpeg"
-        data-item-name="Bitter Solitude">
+        data-item-name="Bitter Solitude"
+        > <!-- Front matter 'in_stock' is either false/true -->
         Add to Cart
       </button>
+      
+      <!-- /T-Shirt Add to Cart button -->
+
+      <!-- Stock count  -->
+      <p>
+        
+        In stock
+        
+        <hr />
+
+
+        
+
+      </p>
+      <!-- /Stock count  -->
+
 
       <div class="row">
         <div class="col-6">
@@ -149,51 +195,6 @@ body {font-family: 'Lora', serif;}
     You might also like:
   </p>
 
-
-
-  
-  <div class="media">
-    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/underwater-photography-of-woman-2404365.jpg" alt="Swimming Lessons">
-    <div class="media-body">
-      <h5 class="mt-0">450</h5>
-      I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer.
-    </div>
-  </div>
-
-  <div class="media">
-    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/white-horse-standing-on-green-grass-field-850424.jpg" alt="Nice Horse">
-    <div class="media-body">
-      <h5 class="mt-0">2500</h5>
-      She is my pride and joy. With soft eyes that you could stare into forever, falling, but at the same time so still, they reflected promise. A heart made of love, slender profile, and a gorgeous chestnut coat, Juliette was always there for me in the darkest days, when it felt like my life was a hurricane in an endless sea. I will never forget the days I spent with her, cantering in a field full of daisies, under a clear blue sky.
-    </div>
-  </div>
-
-  <div class="media">
-    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg" alt="Fashion Sense">
-    <div class="media-body">
-      <h5 class="mt-0">1172</h5>
-      She gazed into my soul; her eyes of liquid amber scrutinising things inside of which I could only dream of seeing in myself. She was a mystery. A dangerously beautiful mystery, and I was ensnared in the trap which she'd set.
-    </div>
-  </div>
-
-  <div class="media">
-    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/person-holding-ball-night-lamp-while-sitting-3043798.jpg" alt="Beginner's Orb">
-    <div class="media-body">
-      <h5 class="mt-0">47.0</h5>
-      Entry level orb. Fun at parties and other places where orbs can be found. 
-    </div>
-  </div>
-
-  <div class="media">
-    <img class="mr-3 w-25 rounded" src="http://localhost:4000//uploads/photo-1581328493669-71ac1ccfbbe6.jpeg" alt="Bitter Solitude">
-    <div class="media-body">
-      <h5 class="mt-0">175</h5>
-      Find yourself complaining a lot? Why not go and do it somewhere far away. Like, really far away so we don't have to hear you bitch. 
-    </div>
-  </div>
-
-
-
   
       <h2 class="border-bottom-2"><a class="text-body" href="/products/swimming-lessons/">Swimming Lessons - <strong>$ 450</strong></a></h2>
 
@@ -204,7 +205,13 @@ body {font-family: 'Lora', serif;}
       <h2 class="border-bottom-2"><a class="text-body" href="/products/fashion-sense/">Fashion Sense - <strong>$ 1172</strong></a></h2>
 
   
-      <h2 class="border-bottom-2"><a class="text-body" href="/products/beginner-s-orb/">Beginner's Orb - <strong>$ 47.0</strong></a></h2>
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/beginner-s-orb/">Beginner's Orb - <strong>$ 47</strong></a></h2>
+
+  
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/forever-reckless-t-shirt/">Forever Reckless T-Shirt - <strong>$ 27</strong></a></h2>
+
+  
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/secret-to-success-ebook/">Secret To Success Ebook - <strong>$ 49.99</strong></a></h2>
 
   
       <h2 class="border-bottom-2"><a class="text-body" href="/products/bitter-solitude/">Bitter Solitude - <strong>$ 175</strong></a></h2>
@@ -213,39 +220,44 @@ body {font-family: 'Lora', serif;}
 
 </div>
 
-
+<!-- Scorcery -->
 <!-- jQuery and Bootstrap /node_modules/* -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-
+<!-- In use on product pages for images there -->
 <script src="http://localhost:4000/js/ekko-lightbox.js"></script>
 <script>
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                  event.preventDefault();
-                  $(this).ekkoLightbox();
-              });
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
 </script>
-
-
 
 <!-- Snipcart -->
 <!-- snipcart public test API  -->
-<div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
-
-
+<!-- Please note that it's important to include snipcart.js script after the div#snipcart. Otherwise, customizations will be ignored. -->
+<div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy">
+<!-- cusomization: https://docs.snipcart.com/v3/setup/customization-->
+</div>
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
+
+<script>
+  $('#my-size').change(function() {
+      $('#my-button').data('item-custom2-value', $(this).val());
+  });
+</script>
 
 <!-- Ionicons -->
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
+<!-- <script>
   window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
   ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
+<script src="https://www.google-analytics.com/analytics.js" async></script> -->
 
 
 </body>

@@ -112,7 +112,17 @@ body {font-family: 'Lora', serif;}
   
     <div class="col-3">
       <h1><a class="" href="/products/beginner-s-orb/">Beginner's Orb</a></h1>
-      Entry level orb. Fun at parties and other places where orbs can be found.  <br><strong>$ 47.0 -</strong> <img class="img-fluid" src="/uploads/person-holding-ball-night-lamp-while-sitting-3043798.jpg">
+      Entry level orb. Fun at parties and other places where orbs can be found.  <br><strong>$ 47 -</strong> <img class="img-fluid" src="/uploads/person-holding-ball-night-lamp-while-sitting-3043798.jpg">
+    </div>
+  
+    <div class="col-3">
+      <h1><a class="" href="/products/forever-reckless-t-shirt/">Forever Reckless T-Shirt</a></h1>
+      Pommy ipsum grab a jumper a cuppa oopsy-daisies, fish and chips Queen Elizabeth squiffy doing my head in, tally-ho The Hounds of Baskerville and we all like figgy pudding. Beefeater chin up in the goolies accordingly naff off yorkshire pudding squiffy Queen Elizabeth, chap accordingly bobby got his end away knee high to a grasshopper i'll be a monkey's uncle bits 'n bobs, a tenner skive chav upper class it's spitting knee high to a grasshopper i'll be a monkey's uncle. Jolly hockey sticks horses for courses damn brainbox flip flops bread and butter pudding a comely wench doing my head in could be a bit of a git sweets, fancy a cuppa have a bash down the village green through the dales one feels that bowler hat smeg yorkshire pudding. <br><strong>$ 27 -</strong> <img class="img-fluid" src="/uploads/photo-1568641470259-3a3253bf8739.jpeg">
+    </div>
+  
+    <div class="col-3">
+      <h1><a class="" href="/products/secret-to-success-ebook/">Secret To Success Ebook</a></h1>
+      Pommy ipsum roast beef it's me peepers Weeping Angels I'd reet fancy a pigeons in Trafalgar Square gob, her Majesty's pleasure the chippy punter a right toff chav lost her marbles, punter twiglets it's just not cricket it's nicked I'd reet fancy a fish and chips. Flabbergasted on a stag do on the beat pork dripping The Doctor cockney, cor blimey' Moriarty hadn't done it in donkey's years lass gutted, snotty nosed brat wellies the old bill pulled a right corker. Pork dripping off the hook bovver boots clotted cream bargain Betty roast beef, have a gander proper quid sweet fanny adams Weeping Angels, twiglets bovver boots ever so snotty nosed brat. <br><strong>$ 49.99 -</strong> <img class="img-fluid" src="/uploads/photo-1519834785169-98be25ec3f84.jpeg">
     </div>
   
     <div class="col-3">
@@ -137,39 +147,44 @@ body {font-family: 'Lora', serif;}
       </footer>
    </div>
   </nav>
-  
+  <!-- Scorcery -->
 <!-- jQuery and Bootstrap /node_modules/* -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-
+<!-- In use on product pages for images there -->
 <script src="http://localhost:4000/js/ekko-lightbox.js"></script>
 <script>
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                  event.preventDefault();
-                  $(this).ekkoLightbox();
-              });
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
 </script>
-
-
 
 <!-- Snipcart -->
 <!-- snipcart public test API  -->
-<div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy"></div>
-
-
+<!-- Please note that it's important to include snipcart.js script after the div#snipcart. Otherwise, customizations will be ignored. -->
+<div hidden id="snipcart" data-api-key="OWFjY2QzZmItMTI4OC00MTVlLTg2MWItYTdmNGMyMTM1MWQzNjM1OTIwNjE1ODY5Mzc1MTcy">
+<!-- cusomization: https://docs.snipcart.com/v3/setup/customization-->
+</div>
 <script src="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js"></script>
+
+<script>
+  $('#my-size').change(function() {
+      $('#my-button').data('item-custom2-value', $(this).val());
+  });
+</script>
 
 <!-- Ionicons -->
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
+<!-- <script>
   window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
   ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
+<script src="https://www.google-analytics.com/analytics.js" async></script> -->
 
 
 </body>
