@@ -10,12 +10,21 @@ fields:
     options:
     - Single
     - T-Shirt
+    - Digital Download
     source:
       type: simple
       section: 
       file: 
       path: 
   label: Product Type
+- name: guid
+  type: text
+  config:
+    required: false
+  label: GUID
+  showOnly:
+    field: product_type
+    value: Digital Download
 - name: t-shirt_small_stock_count
   type: number
   label: T-Shirt Small Stock Count
@@ -154,4 +163,5 @@ pages:
 - _products/fashion-sense.md
 - _products/forever-reckless-t-shirt.md
 - _products/nice-horse.md
+- _products/secret-to-success-ebook.md
 - _products/swimming-lessons.md
