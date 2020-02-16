@@ -3,7 +3,10 @@ email: jvaage@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# url: the base hostname & protocol for your site, e.g. http://example.com
+#url: http://localhost:4000/
+url: https://jekyll-forestry-snipcart.netlify.com/
 
 plugins: [jekyll-paginate]
 
