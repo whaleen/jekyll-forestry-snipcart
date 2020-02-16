@@ -132,6 +132,7 @@ fields:
   config:
     required: false
   label: Sale Price
+  default: '0'
 - name: featured_image
   type: file
   config:
