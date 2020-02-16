@@ -148,6 +148,11 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: guid
+  type: text
+  config:
+    required: false
+  label: GUID
 pages:
 - _products/beginner-s-orb.md
 - _products/bitter-solitude.md
