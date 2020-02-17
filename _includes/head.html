@@ -5,41 +5,64 @@
 
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="{{ site.url }}/css/main.css">
-<link rel="stylesheet" href="{{ site.url }}/css/ekko-lightbox.css">
-<link rel="stylesheet" href="{{ site.url }}/css/animate.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/ekko-lightbox.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/animate.css">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
 <style>
+
+  .product_page_thumbnav img {
+    object-fit: cover;
+    width:100%;
+    height:70px;
+}
+
+.card {border: 0px;}
+
 h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
 body {font-family: 'Lora', serif;}
 .sans {font-family: 'Open Sans', sans-serif;}
 .serif {font-family: 'Lora', serif;}
 
 @media (min-width: 576px) {
-    .card-columns-a {
-        column-count: 1;
-    }
+.card-columns-a {
+column-count: 1;
+}
 }
 
 @media (min-width: 768px) {
-    .card-columns-a {
-        column-count: 2;
-    }
+.card-columns-a {
+column-count: 2;
 }
-
-@media (min-width: 992px) {
-    .card-columns-a {
-        column-count: 2;
-    }
 }
 
 @media (min-width: 1200px) {
-    .card-columns-a {
-        column-count: 3;
-    }
+.card-columns-a {
+column-count: 3;
+}
+}
+
+<!-- If wider than these pixel values the column count will apply -->
+<!-- Product Card Columns  -->
+@media (min-width: 320px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 576px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-product {
+column-count: 2;
+}
 }
 </style>
 

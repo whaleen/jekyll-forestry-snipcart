@@ -1,0 +1,41 @@
+---
+title: Products A
+layout: default
+permalink: /products-a/
+---
+
+
+<div class="container">
+
+
+<div class="card-columns card-columns-product">
+
+{% for product in site.products %}
+  <div class="card">
+      {% include components/product/title.html %}
+  </div>
+
+  <div class="card">
+      {% include components/product/price.html %}
+  </div>
+
+  <div class="card">
+      {% include components/product/add_to_cart.html %}
+  </div>
+
+  <div class="card">
+    {% include components/product/featured_image.html %}
+  </div>
+
+  <div class="card">
+    {{ page.description }}
+  </div>
+
+  <div class="card">
+    {% include components/product/thumbnails.html %}
+  </div>
+{% endfor %}
+
+</div>
+
+</div>

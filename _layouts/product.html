@@ -5,234 +5,39 @@
 {% include head.html %}
 </head>
 
-<body>
-
 {% include nav.html %}
 
+<div class="container pt-5">
+<div class="card-columns card-columns-product">
+  <div class="card">
+      {% include components/product/title.html %}
+  </div>
+  <div class="card">
+      {% include components/product/price.html %}
+  </div>
+  <div class="card">
+      {% include components/product/options.html %}
+  </div>
 
+  <div class="card">
+      {% include components/product/add_to_cart.html %}
+  </div>
+  <div class="card">
+    {{ page.description }}
+  </div>
 
-<div class="container">
-  <div class="row">
-
-
-{% for product in site.products %}
-    <div class="col-1">
-      <img class="img-fluid" src="{{ product.featured_image }}" />
-    </div>
-{% endfor %}
+  <div class="card">
+    {% include components/product/featured_image.html %}
+  </div>
+  <div class="card">
+    {% include components/product/thumbnails.html %}
   </div>
 </div>
+</div>
 
+<hr />
 
-<div class="container p-4">
-
-
-  <div class="post-nav">
-    <div>
-      {% if page.previous.url %}
-      <a href="{{page.previous.url}}">&laquo;&nbsp;{{page.previous.title}} {{page.previous.featured_image}}</a>
-      {% endif %}
-    </div>
-    <div class="post-nav-next">
-      {% if page.next.url %}
-      <a href="{{page.next.url}}">{{page.next.title}}&nbsp;&raquo;</a>
-      {% endif %}
-    </div>
-  </div>
-
-
-
-
-
-  <div class="row">
-
-    <div class="col-6">
-      <h1 class="display-1">{{ page.title }}</h1>
-
-
-<!-- {{ page.categories }} -->
-
-{% capture first_category %}<!-- -->
-  {% for item in page.categories limit: 1 %}
-    {{ item }}
-  {% endfor %}
-{% endcapture %}
-<!--
-{% for product in site.products %}
-  {{ product.title }}
-{% endfor %} -->
-
-
-{{ first_category }}{{ first_category }}
-<ul>
-{% for product in site.products %}
-  {% if product.categories contains {{ first_category }} %}
-
-    <li>{{ product.title }}</li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-
-      <!-- Show sale price or regular price
-      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
-      -->
-
-      <p class="sans p-2">
-        {% if page.sale_price %}
-        <strike><strong class="animated headShake">$ {{ page.price }}</strong></strike>  <strong class="animated fadeIn">$ {{ page.sale_price }}</strong>
-        {% else %}
-        <strong>$ {{ page.price }}</strong>
-        {% endif %}
-      </p>
-
-
-      <p>{{ page.description }}</p>
-
-
-
-        {% if page.product_type == 'T-Shirt' %}
-          <select id="my-size">
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
-          </select>
-        {% endif %}
-
-
-        <!--  Digital Download Button -->
-        {% if page.product_type == 'Digital Download' %}
-        <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
-          data-item-id="{{ page.title | slugify }}"
-          data-item-price="99.99"
-          data-item-url="{{ site.url }}{{ page.url }}"
-          data-item-description="{{ page.description }}"
-          data-item-image="{{ page.featured_image}}"
-          data-item-name="{{ page.title }}"
-          data-item-file-guid="{{ page.guid }}"
-          {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
-          {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
-        </button>
-        {% endif %}
-
-
-
-      <!-- T-Shirt Add to Cart button
-      - Snipcart integrating with .snipcart-add-item
-      - Can be disabled by a false value in frontmatter 'in_stock: false'
-      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
-      -->
-      {% if page.product_type == 'T-Shirt' %}
-      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
-        data-item-id="{{ page.title | slugify }}"
-        data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
-        data-item-url="{{ site.url }}{{ page.url }}"
-        data-item-description="{{ page.description }}"
-        data-item-image="{{ page.featured_image}}"
-        data-item-name="{{ page.title }}"
-        data-item-custom2-name="Size"
-        data-item-custom2-options="Small|Medium|Large[+2]"
-        {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
-        {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
-      </button>
-      {% endif %}
-      <!-- /T-Shirt Add to Cart button -->
-
-
-      <!-- Single Add to Cart button
-      - Snipcart integrating with .snipcart-add-item
-      - Can be disabled by a false value in frontmatter 'in_stock: false'
-      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
-      -->
-      {% if page.product_type == 'Single' %}
-      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
-        data-item-id="{{ page.title | slugify }}"
-        data-item-price="{% if page.sale_price %}{{ page.sale_price }}{% else %}{{ page.price }}{% endif %}"
-        data-item-url="{{ site.url }}{{ page.url }}"
-        data-item-description="{{ page.description }}"
-        data-item-image="{{ page.featured_image}}"
-        data-item-name="{{ page.title }}"
-        {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
-        {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
-      </button>
-      {% endif %}
-      <!-- /T-Shirt Add to Cart button -->
-
-
-
-
-
-      <!-- Stock count  -->
-      <p>
-        {% if page.stock_count == 0 %}
-        there are none left :(
-        {% else %}
-        In stock
-        {% endif %}
-        <hr />
-
-
-        {% if page.product_type == 'T-Shirt' %}
-          <!-- Inventory per size  -->
-          <!-- Small count -->
-          {% if page.t-shirt_small_stock_count == 0 %}
-          No Small size left :(
-          {% else %}
-          There are {{ page.t-shirt_small_stock_count }} in Small left
-          {% endif %}
-          <hr />
-          <!-- Medium count -->
-          {% if page.t-shirt_medium_stock_count == 0 %}
-          No Medium size left :(
-          {% else %}
-          There are {{ page.t-shirt_medium_stock_count }} in Medium left
-          {% endif %}
-          <hr />
-          <!-- Large count -->
-          {% if page.t-shirt_large_stock_count == 0 %}
-          No Large size left :(
-          {% else %}
-          There are {{ page.t-shirt_large_stock_count }} in Large left
-          {% endif %}
-        {% endif %}
-
-      </p>
-      <!-- /Stock count  -->
-
-
-      <div class="row">
-        <div class="col-6">
-          <!--  -->
-        </div>
-        <div class="col-6">
-          <!--  -->
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-6">
-      <a href="{{ site.url }}{{ page.featured_image }}"data-toggle="lightbox" data-gallery="{{ page.title | slugify }}-gallery">
-      <img class="img-fluid rounded" src="{{ site.url }}{{ page.featured_image }}" />
-      </a>
-
-      <div class="row pt-4">
-        {% for image in page.images %} <!-- Loop through the photos from YAML frontmatter -->
-          <div class="col-6">
-            <a href="{{ site.url }}{{ page.images[forloop.index0] }}" data-toggle="lightbox" data-gallery="{{ page.title | slugify }}-gallery">
-              <img class="img-fluid rounded" src="{{ page.images[forloop.index0] }}" >
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-
-    </div>
-
-  </div>
-
-<!-- https://gist.github.com/opattison/6191106 -->
-
-</div><!-- /container -->
+{% include components/product/prev_next.html %}
 
 <hr />
 
@@ -240,6 +45,16 @@
   <p>
     You might also like:
   </p>
+
+
+  <div class="container pt-5">
+  <div class="card-columns">
+{% for product in site.products %}
+<div class="card">
+  <img src="{{ site.url }}/{{ product.featured_image }}" />
+</div>
+{% endfor %}
+
 
   {% for product in site.products %}
       <h2 class="border-bottom-2"><a class="text-body" href="{{ product.url }}">{{ product.title }} - <strong>$ {{ product.price }}</strong></a></h2>

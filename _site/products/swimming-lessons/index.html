@@ -9,18 +9,65 @@
 
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="http://localhost:4000/css/main.css">
-<link rel="stylesheet" href="http://localhost:4000/css/ekko-lightbox.css">
-<link rel="stylesheet" href="http://localhost:4000/css/animate.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/ekko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/animate.css">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
 <style>
+
+  .product_page_thumbnav img {
+    object-fit: cover;
+    width:100%;
+    height:70px;
+}
+
+.card {border: 0px;}
+
 h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
 body {font-family: 'Lora', serif;}
 .sans {font-family: 'Open Sans', sans-serif;}
 .serif {font-family: 'Lora', serif;}
+
+@media (min-width: 576px) {
+.card-columns-a {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-a {
+column-count: 2;
+}
+}
+
+@media (min-width: 1200px) {
+.card-columns-a {
+column-count: 3;
+}
+}
+
+<!-- If wider than these pixel values the column count will apply -->
+<!-- Product Card Columns  -->
+@media (min-width: 320px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 576px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-product {
+column-count: 2;
+}
+}
 </style>
 
 
@@ -28,12 +75,6 @@ body {font-family: 'Lora', serif;}
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
-<style>
-  .snipcart-layout, .snipcart-modal, .snipcart-cart-header, .snipcart-cart__footer, snipcart-cart__content, .snipcart-item-list {background-color: #fff;}
-  .snipcart-featured-payment-methods__link {
-    display: none;
-}
-</style>
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
@@ -43,7 +84,31 @@ body {font-family: 'Lora', serif;}
 
 </head>
 
-<body>
+<script>
+function getSize()
+{
+var w = document.documentElement.clientWidth;
+var h = document.documentElement.clientHeight;
+// put the result into a span tag
+ document.getElementById('wh').innerHTML = "<span>Width: " + w + "Height: " + h + "</span>";
+}
+</script>
+
+  <!-- Resize the window (here output panel) and see the result !-->
+  <body onload="getSize()" onresize="getSize()">
+
+<div class="bg-light">
+<div class="container border-left border-right border-danger">
+<div class="row">
+  <div id="wh">
+  <!-- Place height and width size here! -->
+  </div>
+</div>
+<div class="row">
+  <small class=""> .container</small>
+</div>
+</div>
+</div>
 
 <div class="border-bottom">
 
@@ -66,17 +131,6 @@ body {font-family: 'Lora', serif;}
           <a class="nav-link" href="http://localhost:4000/news/">News</a>
         </li>
       </ul>
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Examples
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="http://localhost:4000/landing/">Landing</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </li>
       <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
         Cart <ion-icon name="cart"></ion-icon>
       </a>
@@ -87,118 +141,130 @@ body {font-family: 'Lora', serif;}
 </div>
 
 
-<div class="container p-4">
+<div class="container pt-5">
+<div class="card-columns card-columns-product">
+  <div class="card">
+        <h1>Swimming Lessons</h1>
 
-  <div class="row">
-
-    <div class="col-6">
-      <h1 class="display-1">Swimming Lessons</h1>
-      <button class="btn ">sports</button><br />
-
-
+  </div>
+  <div class="card">
       <!-- Show sale price or regular price
-      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
-      -->
-      <p class="sans p-2">
-        
-        <strike><strong class="animated headShake">$ 450</strong></strike>  <strong class="animated fadeIn">$ </strong>
-        
-      </p>
+- Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+-->
+  <!-- Product Price -->
+  <div>
+  
+  <strike>&dollar;450</strike> &dollar;
+  
+  </div>
 
-
-      <p>I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer.</p>
-
-
-
-        
-
-
-        <!--  Digital Download Button -->
-        
-
-
-
-      <!-- T-Shirt Add to Cart button
-      - Snipcart integrating with .snipcart-add-item
-      - Can be disabled by a false value in frontmatter 'in_stock: false'
-      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
-      -->
+  </div>
+  <div class="card">
       
-      <!-- /T-Shirt Add to Cart button -->
+        
 
-
-      <!-- Single Add to Cart button
-      - Snipcart integrating with .snipcart-add-item
-      - Can be disabled by a false value in frontmatter 'in_stock: false'
-      - Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
-      -->
-      
-      <button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
-        data-item-id="swimming-lessons"
-        data-item-price=""
-        data-item-url="/products/swimming-lessons/"
-        data-item-description="I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer."
-        data-item-image="/uploads/underwater-photography-of-woman-2404365.jpg"
-        data-item-name="Swimming Lessons"
-        > <!-- Front matter 'in_stock' is either false/true -->
-        Add to Cart
-      </button>
-      
-      <!-- /T-Shirt Add to Cart button -->
 
       <!-- Stock count  -->
       <p>
         
         In stock
         
-        <hr />
-
 
         
 
       </p>
       <!-- /Stock count  -->
 
-
-      <div class="row">
-        <div class="col-6">
-          <!--  -->
-        </div>
-        <div class="col-6">
-          <!--  -->
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-6">
-      <a href="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg"data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
-      <img class="img-fluid rounded" src="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg" />
-      </a>
-
-      <div class="row pt-4">
-         <!-- Loop through the photos from YAML frontmatter -->
-          <div class="col-6">
-            <a href="http://localhost:4000/uploads/high-angle-photo-of-person-swimming-3098671.jpg" data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
-              <img class="img-fluid rounded" src="/uploads/high-angle-photo-of-person-swimming-3098671.jpg" >
-            </a>
-          </div>
-         <!-- Loop through the photos from YAML frontmatter -->
-          <div class="col-6">
-            <a href="http://localhost:4000/uploads/diver-under-the-sea-887826.jpg" data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
-              <img class="img-fluid rounded" src="/uploads/diver-under-the-sea-887826.jpg" >
-            </a>
-          </div>
-        
-      </div>
-
-    </div>
-
   </div>
 
-<!-- https://gist.github.com/opattison/6191106 -->
+  <div class="card">
+      <!--  Digital Download Button -->
 
-</div><!-- /container -->
+
+
+
+<!-- T-Shirt Add to Cart button
+- Snipcart integrating with .snipcart-add-item
+- Can be disabled by a false value in frontmatter 'in_stock: false'
+- Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+-->
+
+<!-- /T-Shirt Add to Cart button -->
+
+
+<!-- Single Add to Cart button
+- Snipcart integrating with .snipcart-add-item
+- Can be disabled by a false value in frontmatter 'in_stock: false'
+- Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+-->
+
+<button id="my-button" class="snipcart-add-item btn btn-primary border-0 rounded-2 bg-dark"
+data-item-id="swimming-lessons"
+data-item-price=""
+data-item-url="http://localhost:4000/products/swimming-lessons/"
+data-item-description="I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer."
+data-item-image="/uploads/underwater-photography-of-woman-2404365.jpg"
+data-item-name="Swimming Lessons"
+> <!-- Front matter 'in_stock' is either false/true -->
+Add to Cart
+</button>
+
+<!-- /T-Shirt Add to Cart button -->
+
+  </div>
+  <div class="card">
+    I could swim forever, dive forever, be here in this underwater world forever. There is something about the motion of it that becomes natural after a while. I'll always need the air and the sunlight, to feel the saline water wash over my skin and through my eye lashes, but there's a reason I was sent here. And so, I swim while I can, rescue while I'm strong, rest when I must. There are times I want to be saved, to give up and await strong arms to pull me from this struggle, then I remember who I am and keep going. I am the rescuer, the swimmer.
+  </div>
+
+  <div class="card">
+    <a href="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg"data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
+<img class="img-fluid rounded" src="http://localhost:4000/uploads/underwater-photography-of-woman-2404365.jpg" />
+</a>
+
+  </div>
+  <div class="card">
+    <div class="row">
+   <!-- Loop through the photos from YAML frontmatter -->
+     <div class="col-6">
+        <a href="http://localhost:4000/uploads/high-angle-photo-of-person-swimming-3098671.jpg" data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
+          <img class="img-fluid rounded" src="/uploads/high-angle-photo-of-person-swimming-3098671.jpg" >
+        </a>
+      </div>
+   <!-- Loop through the photos from YAML frontmatter -->
+     <div class="col-6">
+        <a href="http://localhost:4000/uploads/diver-under-the-sea-887826.jpg" data-toggle="lightbox" data-gallery="swimming-lessons-gallery">
+          <img class="img-fluid rounded" src="/uploads/diver-under-the-sea-887826.jpg" >
+        </a>
+      </div>
+  
+</div>
+
+  </div>
+</div>
+</div>
+
+<hr />
+
+<div class="container pt-5 pb-5">
+<div class="row justify-content-between">
+    <div class="col-3 col-sm-2">
+      <div class="product_page_thumbnav">
+      
+    </div>
+    </div>
+    <div class="col-3 col-sm-2">
+      
+      Nice Horse
+      <a href="/products/nice-horse/">
+        <div class="product_page_thumbnav">
+        <img src="http://localhost:4000/uploads/white-horse-standing-on-green-grass-field-850424.jpg" />
+        </div>
+      </a>
+      
+    </div>
+</div>
+</div>
+
 
 <hr />
 
@@ -207,6 +273,40 @@ body {font-family: 'Lora', serif;}
     You might also like:
   </p>
 
+
+  <div class="container pt-5">
+  <div class="card-columns">
+
+<div class="card">
+  <img src="http://localhost:4000//uploads/underwater-photography-of-woman-2404365.jpg" />
+</div>
+
+<div class="card">
+  <img src="http://localhost:4000//uploads/white-horse-standing-on-green-grass-field-850424.jpg" />
+</div>
+
+<div class="card">
+  <img src="http://localhost:4000//uploads/photo-of-woman-wearing-orange-long-sleeves-2902095.jpg" />
+</div>
+
+<div class="card">
+  <img src="http://localhost:4000//uploads/person-holding-ball-night-lamp-while-sitting-3043798.jpg" />
+</div>
+
+<div class="card">
+  <img src="http://localhost:4000//uploads/photo-1568641470259-3a3253bf8739.jpeg" />
+</div>
+
+<div class="card">
+  <img src="http://localhost:4000//uploads/photo-1519834785169-98be25ec3f84.jpeg" />
+</div>
+
+<div class="card">
+  <img src="http://localhost:4000//uploads/photo-1581328493669-71ac1ccfbbe6.jpeg" />
+</div>
+
+
+
   
       <h2 class="border-bottom-2"><a class="text-body" href="/products/swimming-lessons/">Swimming Lessons - <strong>$ 450</strong></a></h2>
 
@@ -214,7 +314,7 @@ body {font-family: 'Lora', serif;}
       <h2 class="border-bottom-2"><a class="text-body" href="/products/nice-horse/">Nice Horse - <strong>$ 2500</strong></a></h2>
 
   
-      <h2 class="border-bottom-2"><a class="text-body" href="/products/fashion-sense/">Fashion Sense - <strong>$ 1172</strong></a></h2>
+      <h2 class="border-bottom-2"><a class="text-body" href="/products/fashion-sense/">Fashion Sense - <strong>$ 1397</strong></a></h2>
 
   
       <h2 class="border-bottom-2"><a class="text-body" href="/products/beginner-s-orb/">Beginner's Orb - <strong>$ 47</strong></a></h2>
@@ -239,7 +339,7 @@ body {font-family: 'Lora', serif;}
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!-- In use on product pages for images there -->
-<script src="http://localhost:4000/js/ekko-lightbox.js"></script>
+<script src="http://localhost:4000/assets/js/ekko-lightbox.js"></script>
 <script>
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();

@@ -1,9 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="" style="background: url({{ site.url}}/img/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
+<html class="no-js" lang="">
 
 <head>
   {% include head.html %}
@@ -15,6 +11,15 @@
   {% include nav.html %}
 
   {{ content }}
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="{{ site.url }}"> {{ site.title }}</a>
+    </div>
+    <!-- Copyright -->
+
+
+  <!-- Footer -->
 
   <nav class="navbar is-fixed-bottom">
     <div class="container">
@@ -29,6 +34,7 @@
       </footer>
    </div>
   </nav>
+
   {% include scripts.html %}
 
 </body>

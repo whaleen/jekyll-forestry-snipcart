@@ -1,0 +1,24 @@
+<div class="container pt-5 pb-5">
+<div class="row justify-content-between">
+    <div class="col-3 col-sm-2">
+      <div class="product_page_thumbnav">
+      {% if page.previous.url %}
+      {{ page.previous.title }}
+      <a href="{{page.previous.url}}">
+        <img src="{{ site.url }}{{ page.previous.featured_image }}" />
+      </a>
+      {% endif %}
+    </div>
+    </div>
+    <div class="col-3 col-sm-2">
+      {% if page.next.url %}
+      {{ page.next.title }}
+      <a href="{{page.next.url}}">
+        <div class="product_page_thumbnav">
+        <img src="{{ site.url }}{{ page.next.featured_image }}" />
+        </div>
+      </a>
+      {% endif %}
+    </div>
+</div>
+</div>

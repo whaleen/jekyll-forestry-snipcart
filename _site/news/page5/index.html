@@ -1,9 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="" style="background: url(http://localhost:4000/img/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;">
+<html class="no-js" lang="">
 
 <head>
   <meta charset="utf-8">
@@ -13,18 +9,65 @@
 
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="http://localhost:4000/css/main.css">
-<link rel="stylesheet" href="http://localhost:4000/css/ekko-lightbox.css">
-<link rel="stylesheet" href="http://localhost:4000/css/animate.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/ekko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/animate.css">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
 <style>
+
+  .product_page_thumbnav img {
+    object-fit: cover;
+    width:100%;
+    height:70px;
+}
+
+.card {border: 0px;}
+
 h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
 body {font-family: 'Lora', serif;}
 .sans {font-family: 'Open Sans', sans-serif;}
 .serif {font-family: 'Lora', serif;}
+
+@media (min-width: 576px) {
+.card-columns-a {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-a {
+column-count: 2;
+}
+}
+
+@media (min-width: 1200px) {
+.card-columns-a {
+column-count: 3;
+}
+}
+
+<!-- If wider than these pixel values the column count will apply -->
+<!-- Product Card Columns  -->
+@media (min-width: 320px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 576px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-product {
+column-count: 2;
+}
+}
 </style>
 
 
@@ -32,12 +75,6 @@ body {font-family: 'Lora', serif;}
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
-<style>
-  .snipcart-layout, .snipcart-modal, .snipcart-cart-header, .snipcart-cart__footer, snipcart-cart__content, .snipcart-item-list {background-color: #fff;}
-  .snipcart-featured-payment-methods__link {
-    display: none;
-}
-</style>
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
@@ -50,7 +87,33 @@ body {font-family: 'Lora', serif;}
 <body>
 
   <!-- Add your site or application content here -->
-  <div class="border-bottom">
+  <script>
+function getSize()
+{
+var w = document.documentElement.clientWidth;
+var h = document.documentElement.clientHeight;
+// put the result into a span tag
+ document.getElementById('wh').innerHTML = "<span>Width: " + w + "Height: " + h + "</span>";
+}
+</script>
+
+  <!-- Resize the window (here output panel) and see the result !-->
+  <body onload="getSize()" onresize="getSize()">
+
+<div class="bg-light">
+<div class="container border-left border-right border-danger">
+<div class="row">
+  <div id="wh">
+  <!-- Place height and width size here! -->
+  </div>
+</div>
+<div class="row">
+  <small class=""> .container</small>
+</div>
+</div>
+</div>
+
+<div class="border-bottom">
 
 <div class="container pt-4 pb-4">
   <nav class="navbar navbar-expand-lg navbar-light">
@@ -71,17 +134,6 @@ body {font-family: 'Lora', serif;}
           <a class="nav-link" href="http://localhost:4000/news/">News</a>
         </li>
       </ul>
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Examples
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="http://localhost:4000/landing/">Landing</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </li>
       <a class="btn btn-primary border-0 rounded-0 bg-white snipcart-checkout">
         Cart <ion-icon name="cart"></ion-icon>
       </a>
@@ -96,23 +148,23 @@ body {font-family: 'Lora', serif;}
 
   <!-- post list -->
   
-  <li><a href="/post%20formats/2010/01/07/post-standard.html"><h3>Post: Standard</h3></a></li>
+  <li><a href="/news/2010/1-7/post-standard/"><h3>Post: Standard</h3></a></li>
   
-  <li><a href="/post%20formats/2010/01/07/post-modified.html"><h3>Post: Modified Date</h3></a></li>
+  <li><a href="/news/2010/1-7/post-modified/"><h3>Post: Modified Date</h3></a></li>
   
-  <li><a href="/edge%20case/2009/10/05/edge-case-very-long-title.html"><h3>Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive 'been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid</h3></a></li>
+  <li><a href="/news/2009/10-5/edge-case-very-long-title/"><h3>Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive 'been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid</h3></a></li>
   
-  <li><a href="/edge%20case/2009/10/05/edge-case-title-should-not-overflow-the-content-area.html"><h3>Antidisestablishmentarianism</h3></a></li>
+  <li><a href="/news/2009/10-5/edge-case-title-should-not-overflow-the-content-area/"><h3>Antidisestablishmentarianism</h3></a></li>
   
-  <li><a href="/edge%20case/2009/09/05/edge-case-no-yaml-title.html"><h3>Edge Case No Yaml Title</h3></a></li>
+  <li><a href="/news/2009/9-5/edge-case-no-yaml-title/"><h3>Edge Case No Yaml Title</h3></a></li>
   
-  <li><a href="/edge%20case/2009/08/06/edge-case-no-body-content.html"><h3>Edge Case: No Body Content</h3></a></li>
+  <li><a href="/news/2009/8-6/edge-case-no-body-content/"><h3>Edge Case: No Body Content</h3></a></li>
   
-  <li><a href="/aciform/antiquarianism/arrangement/asmodeus/broder/buying/championship/chastening/disinclination/disinfection/dispatch/echappee/enphagy/equipollent/2009/07/02/edge-case-many-categories.html"><h3>Edge Case: Many Categories</h3></a></li>
+  <li><a href="/news/2009/7-2/edge-case-many-categories/"><h3>Edge Case: Many Categories</h3></a></li>
   
-  <li><a href="/edge%20case/2009/06/01/edge-case-many-tags.html"><h3>Edge Case: Many Tags</h3></a></li>
+  <li><a href="/news/2009/6-1/edge-case-many-tags/"><h3>Edge Case: Many Tags</h3></a></li>
   
-  <li><a href="/edge%20case/2009/05/15/edge-case-nested-and-mixed-lists.html"><h3>Edge Case: Nested and Mixed Lists</h3></a></li>
+  <li><a href="/news/2009/5-15/edge-case-nested-and-mixed-lists/"><h3>Edge Case: Nested and Mixed Lists</h3></a></li>
   
 
   <nav aria-label="Page navigation example">
@@ -175,6 +227,15 @@ body {font-family: 'Lora', serif;}
 </div>
 
 
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="http://localhost:4000"> jekyll-forestry-snipcart</a>
+    </div>
+    <!-- Copyright -->
+
+
+  <!-- Footer -->
+
   <nav class="navbar is-fixed-bottom">
     <div class="container">
       <footer class="">
@@ -188,6 +249,7 @@ body {font-family: 'Lora', serif;}
       </footer>
    </div>
   </nav>
+
   <!-- Scorcery -->
 <!-- jQuery and Bootstrap /node_modules/* -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -195,7 +257,7 @@ body {font-family: 'Lora', serif;}
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!-- In use on product pages for images there -->
-<script src="http://localhost:4000/js/ekko-lightbox.js"></script>
+<script src="http://localhost:4000/assets/js/ekko-lightbox.js"></script>
 <script>
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();

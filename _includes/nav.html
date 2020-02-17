@@ -1,3 +1,29 @@
+<script>
+function getSize()
+{
+var w = document.documentElement.clientWidth;
+var h = document.documentElement.clientHeight;
+// put the result into a span tag
+ document.getElementById('wh').innerHTML = "<span>Width: " + w + "Height: " + h + "</span>";
+}
+</script>
+
+  <!-- Resize the window (here output panel) and see the result !-->
+  <body onload="getSize()" onresize="getSize()">
+
+<div class="bg-light">
+<div class="container border-left border-right border-danger">
+<div class="row">
+  <div id="wh">
+  <!-- Place height and width size here! -->
+  </div>
+</div>
+<div class="row">
+  <small class=""> .container</small>
+</div>
+</div>
+</div>
+
 <div class="border-bottom">
 
 <div class="container pt-4 pb-4">

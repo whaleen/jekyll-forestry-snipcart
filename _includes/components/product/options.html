@@ -1,0 +1,44 @@
+
+        {% if page.product_type == 'T-Shirt' %}
+          <select id="my-size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          </select>
+        {% endif %}
+
+
+      <!-- Stock count  -->
+      <p>
+        {% if page.stock_count == 0 %}
+        there are none left :(
+        {% else %}
+        In stock
+        {% endif %}
+
+        {% if page.product_type == 'T-Shirt' %}
+          <!-- Inventory per size  -->
+          <!-- Small count -->
+          {% if page.t-shirt_small_stock_count == 0 %}
+          No Small size left :(
+          {% else %}
+          There are {{ page.t-shirt_small_stock_count }} in Small left
+          {% endif %}
+          <hr />
+          <!-- Medium count -->
+          {% if page.t-shirt_medium_stock_count == 0 %}
+          No Medium size left :(
+          {% else %}
+          There are {{ page.t-shirt_medium_stock_count }} in Medium left
+          {% endif %}
+          <hr />
+          <!-- Large count -->
+          {% if page.t-shirt_large_stock_count == 0 %}
+          No Large size left :(
+          {% else %}
+          There are {{ page.t-shirt_large_stock_count }} in Large left
+          {% endif %}
+        {% endif %}
+
+      </p>
+      <!-- /Stock count  -->

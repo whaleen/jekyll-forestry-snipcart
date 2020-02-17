@@ -13,18 +13,65 @@
 
 <!-- CSS -->
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="http://localhost:4000/css/main.css">
-<link rel="stylesheet" href="http://localhost:4000/css/ekko-lightbox.css">
-<link rel="stylesheet" href="http://localhost:4000/css/animate.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/ekko-lightbox.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/animate.css">
 
 
 <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
 <style>
+
+  .product_page_thumbnav img {
+    object-fit: cover;
+    width:100%;
+    height:70px;
+}
+
+.card {border: 0px;}
+
 h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
 body {font-family: 'Lora', serif;}
 .sans {font-family: 'Open Sans', sans-serif;}
 .serif {font-family: 'Lora', serif;}
+
+@media (min-width: 576px) {
+.card-columns-a {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-a {
+column-count: 2;
+}
+}
+
+@media (min-width: 1200px) {
+.card-columns-a {
+column-count: 3;
+}
+}
+
+<!-- If wider than these pixel values the column count will apply -->
+<!-- Product Card Columns  -->
+@media (min-width: 320px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 576px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-product {
+column-count: 2;
+}
+}
 </style>
 
 
@@ -32,12 +79,6 @@ body {font-family: 'Lora', serif;}
 <!-- SnipCart -->
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" />
 
-<style>
-  .snipcart-layout, .snipcart-modal, .snipcart-cart-header, .snipcart-cart__footer, snipcart-cart__content, .snipcart-item-list {background-color: #fff;}
-  .snipcart-featured-payment-methods__link {
-    display: none;
-}
-</style>
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
@@ -93,7 +134,7 @@ body {font-family: 'Lora', serif;}
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!-- In use on product pages for images there -->
-<script src="http://localhost:4000/js/ekko-lightbox.js"></script>
+<script src="http://localhost:4000/assets/js/ekko-lightbox.js"></script>
 <script>
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
     event.preventDefault();

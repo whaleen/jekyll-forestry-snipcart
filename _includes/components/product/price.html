@@ -1,0 +1,11 @@
+<!-- Show sale price or regular price
+- Price value comes from frontmatter 'sale_price' if it exists otherwise defaults to 'price'
+-->
+  <!-- Product Price -->
+  <div>
+  {% if page.sale_price == '0' %}
+  &dollar; {{ page.price }}
+  {% else %}
+  <strike>&dollar;{{ page.price }}</strike> &dollar;{{ page.sale_price }}
+  {% endif %}
+  </div>
