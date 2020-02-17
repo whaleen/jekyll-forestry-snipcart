@@ -1,5 +1,26 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cea885a8-e83a-4168-8f06-a50c84696017/deploy-status)](https://app.netlify.com/sites/jekyll-forestry-snipcart/deploys)
 
-Don't use this... yet.
+
+Don't use this ... yet.
+
+
+
+
+
+Features
+
+Products
+- Custom
+- T-shirts
+- Digital Downloads
+Conference Ticket Sales
+
+Snipcart integration.
+
+
+
+
+
 
 
 
