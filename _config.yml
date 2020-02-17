@@ -4,14 +4,14 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is an eCommerce solution for Jekyll. It has support for Forestry.io and SnipCart.
 baseurl: "" # the subpath of your site, e.g. /blog
 
+host: localhost
 # url: the base hostname & protocol for your site, e.g. http://example.com
-#url: http://localhost:4000
+# url: http://127.0.0.1:4000/
 url: https://jekyll-forestry-snipcart.netlify.com
 
 # Which format is best for listing plugins???????? Trying this for now:
 plugins:
     - jekyll-paginate
-    - jekyll-minifier
 
 paginate: 10
 paginate_path: "/news/page:num/"
@@ -26,13 +26,28 @@ collections:
     permalink: "/products/:path/"
   event-tiers:
     output: true
-    permalink: "/event-tiers/:path/"
+    permalink: "/event/:path/"
+
+defaults:
+  -
+    scope:
+      path: "_posts" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      permalink: news/:year/:i_month-:i_day/:title/
+
+# Disqus settings
+# disqus: test-apkdzgmqhj
+
+# MailChimp settings
+# mailchimp_action: https://samesies.us17.list-manage.com/subscribe/post-json?u=66ddf555dab480e6a8606430b&amp;id=89b3ee034f
+# mailchimp_input: b_66ddf555dab480e6a8606430b_89b3ee034f
 
 ################################
 # Analytics Settings
 ################################
-google_tag_manager: UA-XXXXXXXX-N
-
+# google_tag_manager: UA-XXXXXXXX-N
 
 sass:
   # loading path from site root
@@ -46,7 +61,6 @@ sass:
   # nested 138,7kB, compact 129,1kB, expanded 135,9 kB, compressed 122,4 kB
   style: compressed
 
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -55,7 +69,7 @@ sass:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
@@ -66,3 +80,6 @@ sass:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+- package.json
+- package-lock.json
+- README.md
