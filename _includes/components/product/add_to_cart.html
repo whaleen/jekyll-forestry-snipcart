@@ -5,7 +5,7 @@
   data-item-price="99.99"
   data-item-url="{{ site.url }}{{ page.url }}"
   data-item-description="not a long description"
-  data-item-image="{{ page.featured_image}}"
+  data-item-image="{{ site.url }}{{ page.featured_image}}"
   data-item-name="{{ page.title }}"
   data-item-file-guid="{{ page.guid }}"
   {% if page.in_stock == false %}disabled{% else %}{% endif %}>
