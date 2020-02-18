@@ -1,0 +1,50 @@
+.product_page_thumbnav img {
+    object-fit: cover;
+    width:100%;
+    height:70px;
+}
+
+.card {border: 0px;}
+
+h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
+body {font-family: 'Lora', serif;}
+.sans {font-family: 'Open Sans', sans-serif;}
+.serif {font-family: 'Lora', serif;}
+
+@media (min-width: 576px) {
+.card-columns-a {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-a {
+column-count: 2;
+}
+}
+
+@media (min-width: 1200px) {
+.card-columns-a {
+column-count: 3;
+}
+}
+
+<!-- If wider than these pixel values the column count will apply -->
+<!-- Product Card Columns  -->
+@media (min-width: 320px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 576px) {
+.card-columns-product {
+column-count: 1;
+}
+}
+
+@media (min-width: 768px) {
+.card-columns-product {
+column-count: 2;
+}
+}
