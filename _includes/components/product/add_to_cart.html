@@ -8,7 +8,7 @@
   data-item-image="{{ page.featured_image}}"
   data-item-name="{{ page.title }}"
   data-item-file-guid="{{ page.guid }}"
-  {% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
+  {% if page.in_stock == false %}disabled{% else %}{% endif %}>
   {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
 </button>
 {% endif %}
@@ -30,7 +30,7 @@ data-item-image="{{ page.featured_image}}"
 data-item-name="{{ page.title }}"
 data-item-custom2-name="Size"
 data-item-custom2-options="Small|Medium|Large[+2]"
-{% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
+{% if page.in_stock == false %}disabled{% else %}{% endif %}>
 {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
 </button>
 {% endif %}
