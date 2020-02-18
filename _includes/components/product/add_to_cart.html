@@ -50,7 +50,7 @@ data-item-url="{{ site.url }}{{ page.url }}"
 data-item-description="{{ page.description }}"
 data-item-image="{{ page.featured_image}}"
 data-item-name="{{ page.title }}"
-{% if page.in_stock == false %}disabled{% else %}{% endif %}> <!-- Front matter 'in_stock' is either false/true -->
+{% if page.in_stock == false %}disabled{% else %}{% endif %}>
 {% if page.in_stock == false %}Out of Stock{% else %}Add to Cart{% endif %}
 </button>
 {% endif %}
