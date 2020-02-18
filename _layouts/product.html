@@ -41,27 +41,6 @@
 
 <hr />
 
-<div class="container">
-  <p>
-    You might also like:
-  </p>
-
-
-  <div class="container pt-5">
-  <div class="card-columns">
-{% for product in site.products %}
-<div class="card">
-  <img src="{{ site.url }}/{{ product.featured_image }}" />
-</div>
-{% endfor %}
-
-
-  {% for product in site.products %}
-      <h2 class="border-bottom-2"><a class="text-body" href="{{ product.url }}">{{ product.title }} - <strong>$ {{ product.price }}</strong></a></h2>
-
-  {% endfor %}
-
-</div>
 
 {% include scripts.html %}
 
