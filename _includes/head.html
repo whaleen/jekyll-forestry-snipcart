@@ -7,90 +7,17 @@
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
 <link rel="stylesheet" href="{{ site.url }}/assets/css/ekko-lightbox.css">
+
+<!-- Animation -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/animate.css">
 
-
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 
-<style>
-
-  .product_page_thumbnav img {
-    object-fit: cover;
-    width:100%;
-    height:70px;
-}
-
-.card {border: 0px;}
-
-h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;}
-body {font-family: 'Lora', serif;}
-.sans {font-family: 'Open Sans', sans-serif;}
-.serif {font-family: 'Lora', serif;}
-
-@media (min-width: 576px) {
-.card-columns-a {
-column-count: 1;
-}
-}
-
-@media (min-width: 768px) {
-.card-columns-a {
-column-count: 2;
-}
-}
-
-@media (min-width: 1200px) {
-.card-columns-a {
-column-count: 3;
-}
-}
-
-<!-- If wider than these pixel values the column count will apply -->
-<!-- Product Card Columns  -->
-@media (min-width: 320px) {
-.card-columns-product {
-column-count: 1;
-}
-}
-
-@media (min-width: 576px) {
-.card-columns-product {
-column-count: 1;
-}
-}
-
-@media (min-width: 768px) {
-.card-columns-product {
-column-count: 2;
-}
-}
-</style>
-
-
+<!-- Custom: Bootrap overrides, dirty hacks, etc... -->
+<link rel="stylesheet" href="{{ site.url }}/assets/css/custom.css">
 
 <!-- SnipCart -->
-<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.6/default/snipcart.css" />
-
-
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/992ce4b1aa.js" crossorigin="anonymous"></script>
-
-<!-- Google Tag Manager -->
-{% if site.google_tag_manager and jekyll.environment == 'production' %}
-<script>
-  (function(w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({
-      'gtm.start': new Date().getTime(),
-      event: 'gtm.js'
-    });
-    var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s),
-      dl = l != 'dataLayer' ? '&l=' + l : '';
-    j.async = true;
-    j.src =
-      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-    f.parentNode.insertBefore(j, f);
-  })(window, document, 'script', 'dataLayer', '{{ site.google_tag_manager }}');
-</script>
-{% endif %}
+<!-- <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css" /> -->
+<!-- <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.6/default/snipcart.css" /> -->
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.8/default/snipcart.css" />
