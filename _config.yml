@@ -6,8 +6,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 host: localhost
 # url: the base hostname & protocol for your site, e.g. http://example.com
-url: http://127.0.0.1:4000/
-#url: https://jekyll-forestry-snipcart.netlify.com
+# url: http://127.0.0.1:4000/
+url: https://jekyll-forestry-snipcart.netlify.com
 
 # Which format is best for listing plugins???????? Trying this for now:
 plugins:
